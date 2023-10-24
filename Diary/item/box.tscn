@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0hqtlrrn3173"]
+
+[ext_resource type="Texture2D" uid="uid://cuxino7m5ifm" path="res://Diary/png/Props.png" id="1_d2iky"]
+[ext_resource type="Script" path="res://Diary/item/box.gd" id="1_rm1na"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0hjn"]
+size = Vector2(29, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ocorp"]
+radius = 71.3442
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d81gx"]
+size = Vector2(30, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vchei"]
+atlas = ExtResource("1_d2iky")
+region = Rect2(96, 195, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvlq5"]
+atlas = ExtResource("1_d2iky")
+region = Rect2(128, 195, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qcqvr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vchei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvlq5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="box" type="StaticBody2D"]
+z_index = 5
+script = ExtResource("1_rm1na")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_l0hjn")
+
+[node name="canopen" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canopen"]
+shape = SubResource("CircleShape2D_ocorp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_d81gx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qcqvr")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="body_entered" from="canopen" to="." method="_on_canopen_body_entered"]
+[connection signal="body_exited" from="canopen" to="." method="_on_canopen_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
