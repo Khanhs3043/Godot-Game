@@ -33,7 +33,8 @@ func _on_trybtn_pressed():
 
 
 func _on_quitbtn_pressed():
-	get_tree().quit()
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://home.tscn")
 
 
 func _on_again_pressed():
@@ -45,4 +46,5 @@ func _on_again_pressed():
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://home.tscn")

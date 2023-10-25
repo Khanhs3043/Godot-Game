@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://02cdfsn10i8h"]
+[gd_scene load_steps=13 format=3 uid="uid://02cdfsn10i8h"]
 
 [ext_resource type="Script" path="res://Diary/level/diary.gd" id="1_4sese"]
 [ext_resource type="PackedScene" uid="uid://u30ubyxddql6" path="res://Diary/env/map.tscn" id="2_ol8u2"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cdi2x4h0xdo5b" path="res://Diary/NPCs/brown.tscn" id="7_4pprx"]
 [ext_resource type="PackedScene" uid="uid://d0hqtlrrn3173" path="res://Diary/item/box.tscn" id="7_e76f5"]
 [ext_resource type="PackedScene" uid="uid://dp2ar37nga46d" path="res://Diary/item/smallbox.tscn" id="8_jtwdr"]
+[ext_resource type="Texture2D" uid="uid://cvnej3p0nklsg" path="res://Diary/png/exit.png" id="9_s2rsp"]
+[ext_resource type="Texture2D" uid="uid://p2kbtoc061q4" path="res://Diary/png/exittext.png" id="10_l7l4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_137bv"]
 size = Vector2(26, 0.5)
@@ -79,7 +81,6 @@ position = Vector2(177, -89)
 scale = Vector2(0.4, 0.4)
 
 [node name="invispos" type="Node2D" parent="."]
-visible = false
 
 [node name="Marker2D" type="Marker2D" parent="invispos"]
 position = Vector2(-731, -338)
@@ -211,7 +212,7 @@ position = Vector2(25, -319)
 rotation = -0.222837
 
 [node name="Marker2D16" type="Marker2D" parent="invispos"]
-position = Vector2(440, -302)
+position = Vector2(442, -284)
 rotation = -2.2375
 
 [node name="Marker2D17" type="Marker2D" parent="invispos"]
@@ -494,7 +495,16 @@ position = Vector2(-751, -227)
 position = Vector2(1234, 143.5)
 shape = SubResource("RectangleShape2D_1vtbr")
 
-[node name="Var" type="Node" parent="."]
+[node name="Exit" type="Sprite2D" parent="."]
+modulate = Color(0.305882, 0.305882, 0.156863, 1)
+position = Vector2(1232, 146)
+scale = Vector2(0.0582032, 0.0614583)
+texture = ExtResource("9_s2rsp")
+
+[node name="Exittext" type="Sprite2D" parent="."]
+position = Vector2(1279, 149)
+scale = Vector2(0.12269, 0.103448)
+texture = ExtResource("10_l7l4k")
 
 [connection signal="body_entered" from="trans/woodendoor1" to="." method="_on_woodendoor_1_body_entered"]
 [connection signal="body_entered" from="trans/woodendoor2" to="." method="_on_woodendoor_2_body_entered"]
