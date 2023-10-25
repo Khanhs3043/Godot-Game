@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://02cdfsn10i8h"]
+[gd_scene load_steps=11 format=3 uid="uid://02cdfsn10i8h"]
 
 [ext_resource type="Script" path="res://Diary/level/diary.gd" id="1_4sese"]
 [ext_resource type="PackedScene" uid="uid://u30ubyxddql6" path="res://Diary/env/map.tscn" id="2_ol8u2"]
@@ -12,7 +12,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_137bv"]
 size = Vector2(26, 0.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vtbr"]
+size = Vector2(8.5, 61)
+
 [node name="Diary" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_4sese")
 
 [node name="map" parent="." instance=ExtResource("2_ol8u2")]
@@ -23,7 +27,7 @@ position = Vector2(1059, 138)
 [node name="npcs" type="Node2D" parent="."]
 
 [node name="pink" parent="npcs" instance=ExtResource("6_ijf5w")]
-position = Vector2(929, 116)
+position = Vector2(917, 284)
 scale = Vector2(0.4, 0.4)
 
 [node name="pink2" parent="npcs" instance=ExtResource("6_ijf5w")]
@@ -51,7 +55,7 @@ position = Vector2(-730, 331)
 scale = Vector2(0.4, 0.4)
 
 [node name="brown" parent="npcs" instance=ExtResource("7_4pprx")]
-position = Vector2(719, 142)
+position = Vector2(708, 106)
 scale = Vector2(0.4, 0.4)
 
 [node name="brown2" parent="npcs" instance=ExtResource("7_4pprx")]
@@ -59,7 +63,7 @@ position = Vector2(598, 140)
 scale = Vector2(0.4, 0.4)
 
 [node name="brown3" parent="npcs" instance=ExtResource("7_4pprx")]
-position = Vector2(197, 193)
+position = Vector2(170, 192)
 scale = Vector2(0.4, 0.4)
 
 [node name="brown6" parent="npcs" instance=ExtResource("7_4pprx")]
@@ -327,6 +331,7 @@ position = Vector2(-563, 365)
 rotation = 0.202642
 
 [node name="ui" parent="." instance=ExtResource("4_d0rri")]
+process_mode = 3
 
 [node name="trans" type="Node2D" parent="."]
 
@@ -385,82 +390,111 @@ position = Vector2(832, -399)
 shape = SubResource("RectangleShape2D_137bv")
 
 [node name="container" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="smallbox2" parent="container" instance=ExtResource("8_jtwdr")]
 position = Vector2(793, 73)
 
 [node name="smallbox12" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(760, -223)
+position = Vector2(776, -231)
 
 [node name="smallbox3" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(503, 73)
+position = Vector2(598, 77)
+
+[node name="smallbox13" parent="container" instance=ExtResource("8_jtwdr")]
+position = Vector2(447, -408)
 
 [node name="smallbox4" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(231, 108)
+position = Vector2(214, 112)
 
 [node name="smallbox5" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(7, 191)
+z_index = 4
+position = Vector2(7, 136)
+
+[node name="smallbox15" parent="container" instance=ExtResource("8_jtwdr")]
+z_index = 4
+position = Vector2(7, 136)
+
+[node name="smallbox16" parent="container" instance=ExtResource("8_jtwdr")]
+z_index = 4
+position = Vector2(405, -98)
 
 [node name="smallbox6" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(476, 428)
+position = Vector2(520, 423)
+
+[node name="smallbox14" parent="container" instance=ExtResource("8_jtwdr")]
+position = Vector2(748, 427)
 
 [node name="smallbox7" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(-219, 171)
+position = Vector2(-340, 168)
 
 [node name="smallbox10" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(-40, -275)
+position = Vector2(-40, -404)
 
 [node name="smallbox11" parent="container" instance=ExtResource("8_jtwdr")]
 position = Vector2(-634, -231)
 
 [node name="smallbox9" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(-704, 288)
+position = Vector2(-806, 284)
 
 [node name="smallbox8" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(-237, 171)
+position = Vector2(-195, 170)
 
 [node name="smallbox" parent="container" instance=ExtResource("8_jtwdr")]
 position = Vector2(808, 73)
 
 [node name="box" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(566, 72)
+position = Vector2(800, 169)
 
 [node name="box13" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(993, -182)
+position = Vector2(952, -186)
 
 [node name="box14" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(959, -182)
+position = Vector2(889, -225)
 
 [node name="box2" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(256, 109)
+position = Vector2(51, 319)
 
 [node name="box3" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(49, 107)
+position = Vector2(49, 112)
+
+[node name="box15" parent="container" instance=ExtResource("7_e76f5")]
+position = Vector2(444, 113)
 
 [node name="box4" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(447, 429)
+position = Vector2(450, 429)
 
 [node name="box5" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(-800, 289)
+position = Vector2(-798, 527)
 
 [node name="box7" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(-766, 289)
+position = Vector2(-482, 530)
 
 [node name="box8" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(-731, 289)
+position = Vector2(-667, 459)
 
 [node name="box9" parent="container" instance=ExtResource("7_e76f5")]
 position = Vector2(-285, -405)
 
 [node name="box10" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(-208, -405)
+position = Vector2(-63, -404)
+
+[node name="box12" parent="container" instance=ExtResource("7_e76f5")]
+position = Vector2(208, -403)
 
 [node name="box6" parent="container" instance=ExtResource("7_e76f5")]
-position = Vector2(-193, 172)
+position = Vector2(-271, 171)
 
 [node name="box11" parent="container" instance=ExtResource("7_e76f5")]
-y_sort_enabled = true
 position = Vector2(-751, -227)
+
+[node name="exit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+position = Vector2(1234, 143.5)
+shape = SubResource("RectangleShape2D_1vtbr")
+
+[node name="Var" type="Node" parent="."]
 
 [connection signal="body_entered" from="trans/woodendoor1" to="." method="_on_woodendoor_1_body_entered"]
 [connection signal="body_entered" from="trans/woodendoor2" to="." method="_on_woodendoor_2_body_entered"]
@@ -468,3 +502,4 @@ position = Vector2(-751, -227)
 [connection signal="body_entered" from="trans/irondoor2" to="." method="_on_irondoor_2_body_entered"]
 [connection signal="body_entered" from="trans/emtydoor1" to="." method="_on_emtydoor_1_body_entered"]
 [connection signal="body_entered" from="trans/emtydoor2" to="." method="_on_emtydoor_2_body_entered"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]

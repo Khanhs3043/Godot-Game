@@ -41,7 +41,7 @@ func _process(delta):
 	for i in sight:
 		if i.is_colliding() and i.get_collider() == player:
 			if not player.is_invisible:
-				print ("i see you")
+				$"../../ui".display_lose()
 func _on_area_2d_body_entered(_ody):
 	if currentDirection == "left":
 		currentDirection = "right"

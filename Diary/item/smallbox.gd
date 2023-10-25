@@ -17,7 +17,6 @@ func _process(_delta):
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		print("click at ",event.position)
 		if can_touch:
 			if is_open:
 				is_open = false

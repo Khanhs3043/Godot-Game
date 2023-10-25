@@ -1,2 +1,3 @@
 extends Node
-var bubbleamount = 0
+
+var have_diary = false

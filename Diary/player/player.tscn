@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dx1x3t7erttod"]
+[gd_scene load_steps=47 format=3 uid="uid://dx1x3t7erttod"]
 
 [ext_resource type="Script" path="res://Diary/player/player.gd" id="1_ca4iw"]
 [ext_resource type="Texture2D" uid="uid://d16t3grw40yyp" path="res://Diary/png/2BlueWizardIdle/Chara - BlueIdle00000.png" id="1_ttt6y"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://cxm51pj5lbycs" path="res://Diary/png/2BlueWizardWalk/Chara_BlueWalk00017.png" id="38_og17m"]
 [ext_resource type="Texture2D" uid="uid://da1csfdxswsjl" path="res://Diary/png/2BlueWizardWalk/Chara_BlueWalk00018.png" id="39_k13h7"]
 [ext_resource type="Texture2D" uid="uid://bgcg0etpmt2g0" path="res://Diary/png/2BlueWizardWalk/Chara_BlueWalk00019.png" id="40_h7oo1"]
+[ext_resource type="Texture2D" uid="uid://bdq5ra78extk1" path="res://Diary/png/spritesheet_48x48.png" id="42_v4a54"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ml41k"]
 radius = 2433.1
@@ -186,8 +187,10 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
-z_index = 10
+z_index = 3
+z_as_relative = false
 y_sort_enabled = true
+position = Vector2(0, -6)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_ca4iw")
 
@@ -221,6 +224,13 @@ zoom = Vector2(2.2, 2.2)
 
 [node name="invisibletime" type="Timer" parent="."]
 wait_time = 15.0
+
+[node name="diary" type="Sprite2D" parent="."]
+position = Vector2(37.625, 51.3751)
+scale = Vector2(1.66026, 1.57653)
+texture = ExtResource("42_v4a54")
+region_enabled = true
+region_rect = Rect2(437, 144, 39, 49)
 
 [connection signal="area_entered" from="reach/take" to="." method="_on_take_area_entered"]
 [connection signal="timeout" from="invisibletime" to="." method="_on_invisibletime_timeout"]
