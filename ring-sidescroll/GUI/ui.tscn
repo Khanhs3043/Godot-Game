@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://boacayteipc1t"]
+
+[ext_resource type="Texture2D" uid="uid://bxqf1pp8yyro2" path="res://png/invisible.png" id="1_3xs1a"]
+[ext_resource type="Script" path="res://GUI/ui.gd" id="1_7qiha"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_7qiha")
+
+[node name="bubblecounter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 621.0
+offset_right = 94.0
+offset_bottom = 621.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="bubblecounter"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_right = 28.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="bubblecounter/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_3xs1a")
+expand_mode = 4
+
+[node name="count" type="Label" parent="bubblecounter/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1

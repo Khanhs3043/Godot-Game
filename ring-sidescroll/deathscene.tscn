@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfnl0f5uxkl38"]
+
+[ext_resource type="Script" path="res://buttons/restart.gd" id="1_2nm4i"]
+
+[node name="deathscene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -72.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+text = "you died"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="restart" type="Button" parent="."]
+offset_left = -408.0
+offset_top = 176.0
+offset_right = -232.0
+offset_bottom = 240.0
+text = "restart"
+script = ExtResource("1_2nm4i")
+
+[connection signal="pressed" from="restart" to="restart" method="_on_pressed"]
