@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxniywovhfbvl"]
+
+[ext_resource type="Script" path="res://leafzonetrigger.gd" id="1_4ac40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0o25v"]
+size = Vector2(64, 48)
+
+[node name="leafzonetrigger" type="Node2D"]
+script = ExtResource("1_4ac40")
+
+[node name="triggerhitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="triggerhitbox"]
+shape = SubResource("RectangleShape2D_0o25v")
+
+[connection signal="body_entered" from="triggerhitbox" to="." method="_on_triggerhitbox_body_entered"]
