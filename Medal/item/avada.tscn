@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy2383s66wf1a"]
+
+[ext_resource type="Texture2D" uid="uid://cimpa7s87wk1b" path="res://Medal/png/15.png" id="1_hrf0i"]
+[ext_resource type="Script" path="res://Medal/item/avada.gd" id="1_wn5wa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhu4"]
+radius = 1.0
+height = 12.0
+
+[node name="avada" type="Area2D"]
+script = ExtResource("1_wn5wa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_hrf0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ubhu4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

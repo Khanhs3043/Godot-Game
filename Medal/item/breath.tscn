@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctc4kddsu466y"]
+
+[ext_resource type="Script" path="res://Medal/item/breath.gd" id="1_sa2co"]
+[ext_resource type="Texture2D" uid="uid://lq2mmlje4mgu" path="res://Medal/png/breath.png" id="1_uci07"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fao4h"]
+radius = 6.08276
+
+[node name="breath" type="Area2D"]
+z_index = -1
+script = ExtResource("1_sa2co")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.500125, -0.499875)
+shape = SubResource("CircleShape2D_fao4h")
+
+[node name="Breath" type="Sprite2D" parent="."]
+self_modulate = Color(0.454902, 1, 1, 0.698039)
+position = Vector2(0.500125, -0.499875)
+scale = Vector2(0.00260005, 0.00260005)
+texture = ExtResource("1_uci07")

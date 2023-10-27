@@ -11,5 +11,9 @@ func _process(_delta):
 	pass
 
 
-func _on_button_pressed():
+func _on_medal_pressed():
+	get_tree().change_scene_to_file("res://Medal/medal.tscn")
+
+
+func _on_diary_pressed():
 	get_tree().change_scene_to_file("res://Diary/level/diary.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://02cdfsn10i8h"]
+[gd_scene load_steps=12 format=3 uid="uid://02cdfsn10i8h"]
 
 [ext_resource type="Script" path="res://Diary/level/diary.gd" id="1_4sese"]
 [ext_resource type="PackedScene" uid="uid://u30ubyxddql6" path="res://Diary/env/map.tscn" id="2_ol8u2"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://d0hqtlrrn3173" path="res://Diary/item/box.tscn" id="7_e76f5"]
 [ext_resource type="PackedScene" uid="uid://dp2ar37nga46d" path="res://Diary/item/smallbox.tscn" id="8_jtwdr"]
 [ext_resource type="Texture2D" uid="uid://cvnej3p0nklsg" path="res://Diary/png/exit.png" id="9_s2rsp"]
-[ext_resource type="Texture2D" uid="uid://p2kbtoc061q4" path="res://Diary/png/exittext.png" id="10_l7l4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_137bv"]
 size = Vector2(26, 0.5)
@@ -339,11 +338,11 @@ process_mode = 3
 [node name="woodendoor1" type="Area2D" parent="trans"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trans/woodendoor1"]
-position = Vector2(592, 321)
+position = Vector2(1088, 113)
 shape = SubResource("RectangleShape2D_137bv")
 
 [node name="wdoor1pos" type="Marker2D" parent="trans/woodendoor1"]
-position = Vector2(592, 330)
+position = Vector2(1087, 122)
 
 [node name="woodendoor2" type="Area2D" parent="trans"]
 
@@ -384,10 +383,10 @@ shape = SubResource("RectangleShape2D_137bv")
 [node name="emtydoor2" type="Area2D" parent="trans"]
 
 [node name="edoor2" type="Marker2D" parent="trans/emtydoor2"]
-position = Vector2(832, -389)
+position = Vector2(1184, 123)
 
 [node name="emtydoor2" type="CollisionShape2D" parent="trans/emtydoor2"]
-position = Vector2(832, -399)
+position = Vector2(1184, 113)
 shape = SubResource("RectangleShape2D_137bv")
 
 [node name="container" type="Node2D" parent="."]
@@ -421,7 +420,7 @@ z_index = 4
 position = Vector2(405, -98)
 
 [node name="smallbox6" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(520, 423)
+position = Vector2(528, 438)
 
 [node name="smallbox14" parent="container" instance=ExtResource("8_jtwdr")]
 position = Vector2(748, 427)
@@ -492,19 +491,13 @@ position = Vector2(-751, -227)
 [node name="exit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
-position = Vector2(1234, 143.5)
+position = Vector2(1241, 144)
 shape = SubResource("RectangleShape2D_1vtbr")
 
 [node name="Exit" type="Sprite2D" parent="."]
-modulate = Color(0.305882, 0.305882, 0.156863, 1)
-position = Vector2(1232, 146)
+position = Vector2(1241, 125)
 scale = Vector2(0.0582032, 0.0614583)
 texture = ExtResource("9_s2rsp")
-
-[node name="Exittext" type="Sprite2D" parent="."]
-position = Vector2(1279, 149)
-scale = Vector2(0.12269, 0.103448)
-texture = ExtResource("10_l7l4k")
 
 [connection signal="body_entered" from="trans/woodendoor1" to="." method="_on_woodendoor_1_body_entered"]
 [connection signal="body_entered" from="trans/woodendoor2" to="." method="_on_woodendoor_2_body_entered"]

@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnjom8hn1p2ce"]
+[gd_scene load_steps=5 format=3 uid="uid://dnjom8hn1p2ce"]
 
 [ext_resource type="Script" path="res://Medal/player/player.gd" id="1_7guiv"]
 [ext_resource type="Texture2D" uid="uid://c14vm72uxuyg7" path="res://Medal/png/human.svg" id="1_uusey"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iwt2w"]
-radius = 28.0
-height = 230.0
+radius = 5.0
+height = 44.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_utk6v"]
+radius = 9.0
+height = 46.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7guiv")
@@ -19,3 +23,18 @@ texture = ExtResource("1_uusey")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.6, 1.6)
+limit_left = -150
+limit_right = 1650
+limit_bottom = 1650
+
+[node name="body" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+shape = SubResource("CapsuleShape2D_utk6v")
+
+[node name="hand" type="Marker2D" parent="."]
+position = Vector2(10, 4)
+
+[connection signal="area_entered" from="body" to="." method="_on_body_area_entered"]
+[connection signal="body_entered" from="body" to="." method="_on_body_body_entered"]
+[connection signal="body_exited" from="body" to="." method="_on_body_body_exited"]

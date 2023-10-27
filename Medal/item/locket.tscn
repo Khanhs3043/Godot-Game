@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd4pcum8oyw0w"]
+
+[ext_resource type="Texture2D" uid="uid://ch170jwi4ngdi" path="res://Medal/png/locket.png" id="1_t1cr8"]
+[ext_resource type="Script" path="res://Medal/item/locket.gd" id="1_w2h5v"]
+[ext_resource type="Texture2D" uid="uid://c6nie3ehirhq7" path="res://Medal/png/light.png" id="3_7q2vj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlh3c"]
+radius = 5.0
+height = 14.0
+
+[node name="locket" type="RigidBody2D"]
+script = ExtResource("1_w2h5v")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.2, 0.2)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("3_7q2vj")
+
+[node name="Locket" type="Sprite2D" parent="."]
+modulate = Color(0.792157, 0.678431, 0.443137, 1)
+position = Vector2(0, -1)
+scale = Vector2(0.070447, 0.070447)
+texture = ExtResource("1_t1cr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tlh3c")

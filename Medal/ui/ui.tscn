@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://3vee3spjb7hf"]
+
+[ext_resource type="Script" path="res://Medal/ui/ui.gd" id="1_mopck"]
+[ext_resource type="Texture2D" uid="uid://cjdlactctskhv" path="res://Medal/png/bg.png" id="1_r1w7q"]
+[ext_resource type="Texture2D" uid="uid://7odimxbd0411" path="res://Medal/png/greenprogress.png" id="3_cyffk"]
+[ext_resource type="Texture2D" uid="uid://b2on705xium7u" path="res://Medal/png/blueprogress.png" id="4_q0db2"]
+
+[node name="ui" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_mopck")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 32.0
+offset_top = 23.0
+offset_right = 596.0
+offset_bottom = 171.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="energy" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+texture_under = ExtResource("1_r1w7q")
+texture_progress = ExtResource("3_cyffk")
+
+[node name="breath" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+texture_under = ExtResource("1_r1w7q")
+texture_progress = ExtResource("4_q0db2")
+
+[node name="Lose" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lose"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -36.0
+offset_right = 115.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Lose/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "You lose !"
+
+[node name="Control" type="Control" parent="Lose/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="HBoxContainer" parent="Lose/VBoxContainer/Control"]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="trybtn" type="Button" parent="Lose/VBoxContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Try again!"
+
+[node name="quitbtn" type="Button" parent="Lose/VBoxContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quit"
+
+[node name="win" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 575.0
+offset_top = 292.0
+offset_right = 615.0
+offset_bottom = 332.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="win"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -36.0
+offset_right = 261.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="win/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "MISSION COMPLETE!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="again" type="Button" parent="win/VBoxContainer"]
+layout_mode = 2
+text = "Play again!"
+
+[node name="quit" type="Button" parent="win/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Lose/VBoxContainer/Control/GridContainer/trybtn" to="." method="_on_trybtn_pressed"]
+[connection signal="pressed" from="Lose/VBoxContainer/Control/GridContainer/quitbtn" to="." method="_on_quitbtn_pressed"]
+[connection signal="pressed" from="win/VBoxContainer/again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="win/VBoxContainer/quit" to="." method="_on_quit_pressed"]

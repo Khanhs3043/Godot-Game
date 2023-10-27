@@ -1,12 +1,205 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqkqccwmhws6q"]
+[gd_scene load_steps=9 format=3 uid="uid://dqkqccwmhws6q"]
 
+[ext_resource type="Script" path="res://Medal/medal.gd" id="1_cgvqf"]
 [ext_resource type="PackedScene" uid="uid://dnjom8hn1p2ce" path="res://Medal/player/player.tscn" id="1_skv2m"]
 [ext_resource type="PackedScene" uid="uid://b4mbn0aps12fx" path="res://Medal/enemy/bone.tscn" id="2_fll00"]
+[ext_resource type="PackedScene" uid="uid://b20rb1ntoj70x" path="res://Medal/env/map.tscn" id="4_oge8w"]
+[ext_resource type="PackedScene" uid="uid://cd4pcum8oyw0w" path="res://Medal/item/locket.tscn" id="5_maoyv"]
+[ext_resource type="PackedScene" uid="uid://3vee3spjb7hf" path="res://Medal/ui/ui.tscn" id="6_v2m22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2b1gq"]
+size = Vector2(2173.5, 291)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjhsq"]
+size = Vector2(137, 119)
 
 [node name="Medal" type="Node2D"]
 position = Vector2(203, 118)
+script = ExtResource("1_cgvqf")
+bubble_creation_time = 15
+
+[node name="air" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="air"]
+position = Vector2(511.75, -213)
+shape = SubResource("RectangleShape2D_2b1gq")
 
 [node name="player" parent="." instance=ExtResource("1_skv2m")]
+position = Vector2(-299, -279)
 
-[node name="bone" parent="." instance=ExtResource("2_fll00")]
-position = Vector2(189, 10)
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="bone" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(796, 105)
+
+[node name="bone6" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(1000, 377)
+
+[node name="bone7" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(1045, 705)
+
+[node name="bone8" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(-64, 736)
+
+[node name="bone9" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(439, 620)
+
+[node name="bone20" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(190, 633)
+
+[node name="bone21" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(738, 1363)
+
+[node name="bone22" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(906, 1329)
+
+[node name="bone23" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(906, 1329)
+
+[node name="bone10" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(210, 931)
+
+[node name="bone11" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(70, 1154)
+
+[node name="bone12" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(-73, 1339)
+
+[node name="bone13" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(-152, 1433)
+
+[node name="bone14" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(-152, 1195)
+
+[node name="bone15" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(1064, 1395)
+
+[node name="bone16" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(183, 1363)
+
+[node name="bone24" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(294, 1181)
+
+[node name="bone17" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(1075, 1093)
+
+[node name="bone18" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(641, 1002)
+
+[node name="bone19" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(485, 1239)
+
+[node name="bone25" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(374, 1390)
+
+[node name="bone26" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(835, 1134)
+
+[node name="bone2" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(195, 321)
+
+[node name="bone3" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(-12, -3)
+
+[node name="bone4" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(400, 202)
+
+[node name="bone5" parent="enemies" instance=ExtResource("2_fll00")]
+position = Vector2(34, 285)
+
+[node name="curses" type="Node2D" parent="."]
+
+[node name="map" parent="." instance=ExtResource("4_oge8w")]
+position = Vector2(-257, -140)
+metadata/_edit_lock_ = true
+
+[node name="bubbleborn" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="bubbleborn"]
+position = Vector2(-25, 1596)
+
+[node name="Marker2D2" type="Marker2D" parent="bubbleborn"]
+position = Vector2(54, 1594)
+
+[node name="Marker2D3" type="Marker2D" parent="bubbleborn"]
+position = Vector2(135, 1598)
+
+[node name="Marker2D4" type="Marker2D" parent="bubbleborn"]
+position = Vector2(207, 1599)
+
+[node name="Marker2D5" type="Marker2D" parent="bubbleborn"]
+position = Vector2(289, 1599)
+
+[node name="Marker2D6" type="Marker2D" parent="bubbleborn"]
+position = Vector2(374, 1599)
+
+[node name="Marker2D7" type="Marker2D" parent="bubbleborn"]
+position = Vector2(455, 1598)
+
+[node name="Marker2D8" type="Marker2D" parent="bubbleborn"]
+position = Vector2(544, 1599)
+
+[node name="Marker2D9" type="Marker2D" parent="bubbleborn"]
+position = Vector2(611, 1598)
+
+[node name="Marker2D10" type="Marker2D" parent="bubbleborn"]
+position = Vector2(690, 1599)
+
+[node name="Marker2D11" type="Marker2D" parent="bubbleborn"]
+position = Vector2(755, 1602)
+
+[node name="Marker2D12" type="Marker2D" parent="bubbleborn"]
+position = Vector2(817, 1599)
+
+[node name="Marker2D13" type="Marker2D" parent="bubbleborn"]
+position = Vector2(874, 1599)
+
+[node name="Marker2D14" type="Marker2D" parent="bubbleborn"]
+position = Vector2(940, 1600)
+
+[node name="Marker2D15" type="Marker2D" parent="bubbleborn"]
+position = Vector2(991, 1598)
+rotation = 2.09675
+
+[node name="Marker2D16" type="Marker2D" parent="bubbleborn"]
+position = Vector2(1057, 1597)
+rotation = 2.09675
+
+[node name="Marker2D17" type="Marker2D" parent="bubbleborn"]
+position = Vector2(1110, 1600)
+rotation = 2.09675
+
+[node name="Marker2D18" type="Marker2D" parent="bubbleborn"]
+position = Vector2(1169, 1594)
+rotation = 2.09675
+
+[node name="Marker2D19" type="Marker2D" parent="bubbleborn"]
+position = Vector2(-192, 1594)
+rotation = 2.09675
+
+[node name="Marker2D20" type="Marker2D" parent="bubbleborn"]
+position = Vector2(-86, 1593)
+rotation = 2.09675
+
+[node name="Marker2D21" type="Marker2D" parent="bubbleborn"]
+position = Vector2(-146, 1594)
+rotation = 2.09675
+
+[node name="bubbles" type="Node" parent="."]
+
+[node name="locket" parent="." instance=ExtResource("5_maoyv")]
+position = Vector2(475, 840)
+
+[node name="ui" parent="." instance=ExtResource("6_v2m22")]
+
+[node name="exit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+position = Vector2(1471.5, -190.5)
+shape = SubResource("RectangleShape2D_rjhsq")
+
+[connection signal="area_entered" from="air" to="." method="_on_air_area_entered"]
+[connection signal="body_entered" from="air" to="." method="_on_air_body_entered"]
+[connection signal="body_exited" from="air" to="." method="_on_air_body_exited"]
+[connection signal="avada" from="player" to="." method="_on_player_avada"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]
