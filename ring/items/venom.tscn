@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://cu4f3ixra23dd"]
+
+[ext_resource type="Script" path="res://ring/items/venom.gd" id="1_wmt1s"]
+[ext_resource type="Texture2D" uid="uid://b1o85c2y5ryuw" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/venomsprite.png" id="2_qboxa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwxw5"]
+radius = 72.0
+height = 240.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lblj3"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyf80"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yv61"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbja6"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlmgw"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsdjm"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pajk"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crdnf"]
+atlas = ExtResource("2_qboxa")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ub3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lblj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyf80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yv61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbja6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlmgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsdjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pajk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crdnf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="venom" type="Area2D"]
+collision_layer = 512
+collision_mask = 2
+script = ExtResource("1_wmt1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vwxw5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6ub3h")
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfnl0f5uxkl38"]
+
+[ext_resource type="Script" path="res://ring/buttons-ring/restart.gd" id="1_ns422"]
+[ext_resource type="FontFile" uid="uid://bwaqj3q6hfyx3" path="res://ring/Art-ring/game_background_3/JumboSale Trial.otf" id="2_3a1wt"]
+[ext_resource type="Texture2D" uid="uid://bhcc50j4hexq1" path="res://ring/Art-ring/game_background_3/game_background_3. 2.png" id="2_6jwvj"]
+[ext_resource type="Script" path="res://ring/Levels-ring/quit.gd" id="4_4jblj"]
+
+[node name="deathscene" type="Node2D"]
+
+[node name="GameBackground3_2" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(0.6, 0.603704)
+texture = ExtResource("2_6jwvj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -200.0
+offset_top = -32.0
+offset_right = 200.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 0, 0, 0.607843)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_3a1wt")
+theme_override_font_sizes/font_size = 61
+text = "you died"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="restart" type="Button" parent="."]
+offset_left = -384.0
+offset_top = 176.0
+offset_right = -104.0
+offset_bottom = 256.0
+text = "restart"
+script = ExtResource("1_ns422")
+
+[node name="quit" type="Button" parent="."]
+offset_left = 104.0
+offset_top = 176.0
+offset_right = 384.0
+offset_bottom = 256.0
+text = "quit"
+script = ExtResource("4_4jblj")
+
+[connection signal="pressed" from="restart" to="restart" method="_on_pressed"]
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]

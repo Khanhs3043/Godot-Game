@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxniywovhfbvl"]
+
+[sub_resource type="GDScript" id="GDScript_7yt5k"]
+script/source = "extends Node2D
+
+
+
+func _on_triggerhitbox_body_entered(body):
+	queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0o25v"]
+size = Vector2(64, 48)
+
+[node name="leafzonetrigger" type="Node2D"]
+script = SubResource("GDScript_7yt5k")
+
+[node name="triggerhitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="triggerhitbox"]
+shape = SubResource("RectangleShape2D_0o25v")
+
+[connection signal="body_entered" from="triggerhitbox" to="." method="_on_triggerhitbox_body_entered"]

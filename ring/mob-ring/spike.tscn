@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://rna2w5sgyryj"]
+
+[ext_resource type="Script" path="res://ring/mob-ring/spike.gd" id="1_jaygi"]
+[ext_resource type="Texture2D" uid="uid://dievyb6kvn33l" path="res://ring/Art-ring/Mossy Tilesetsdfsd/spikes.png" id="1_k64bq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p30o7"]
+size = Vector2(288, 1304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ci7t"]
+size = Vector2(416, 1472)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb788"]
+size = Vector2(288, 1472)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_jaygi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(48, 12)
+shape = SubResource("RectangleShape2D_p30o7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.58301
+texture = ExtResource("1_k64bq")
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(24, 32)
+shape = SubResource("RectangleShape2D_6ci7t")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(48, 32)
+shape = SubResource("RectangleShape2D_nb788")
+
+[connection signal="area_shape_entered" from="hitbox" to="." method="_on_hitbox_area_shape_entered"]
