@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var health = 50
+@export var health = 100
 @export var SPEED = 300.0
 @onready var sprite : AnimatedSprite2D = $mobsprite
 var chase : bool = false
@@ -17,19 +17,27 @@ func _physics_process(delta):
 				sprite.flip_h = true
 			elif direction.x < 0 :
 				sprite.flip_h = false
-	else:
+	elif !chase && health > 0:
 		get_node("mobsprite").play("idle")
 		velocity.x = 0
 	move_and_slide()
 
+func _process(delta):
+	if health <= 0:
+		death()
 
-
+func death():
+	velocity.x = 0
+	chase = false
+	get_node("mobsprite").play("death")
+	await get_node("mobsprite").animation_finished
+	self.queue_free()
 
 func _on_detectionzone_body_entered(body):
 	chase = true
 
-
 func _on_detectionzone_body_exited(body):
 	chase = false
 
-
+func _on_hitbox_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	health -= 10

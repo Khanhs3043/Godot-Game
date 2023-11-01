@@ -18,8 +18,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	player_detected = true
-	print("player in")
 
 func _on_body_exited(body):
 	player_detected = false
-	print("player out")

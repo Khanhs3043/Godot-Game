@@ -26,5 +26,14 @@ offset_right = 668.0
 offset_bottom = 240.0
 text = "Medal"
 
+[node name="ring" type="Button" parent="."]
+offset_left = 736.0
+offset_top = 104.0
+offset_right = 886.0
+offset_bottom = 239.0
+text = "Ring
+"
+
 [connection signal="pressed" from="diary" to="." method="_on_diary_pressed"]
 [connection signal="pressed" from="medal" to="." method="_on_medal_pressed"]
+[connection signal="pressed" from="ring" to="." method="_on_ring_pressed"]

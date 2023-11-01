@@ -11,7 +11,7 @@ class_name GroundState
 func state_input(event : InputEvent):
 	if (event.is_action_pressed("jump")):
 		jump()
-	if (event.is_action_pressed("atk")):
+	if (event.is_action_pressed("leftclick")):
 		atk()
 
 

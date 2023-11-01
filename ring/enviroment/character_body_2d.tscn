@@ -1,0 +1,191 @@
+[gd_scene load_steps=43 format=3 uid="uid://bt4ilk3wu116x"]
+
+[ext_resource type="Texture2D" uid="uid://db30cmwsxctxc" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00000.png" id="1_iqjvr"]
+[ext_resource type="Texture2D" uid="uid://01oxxi4wjohu" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00001.png" id="2_pc8ac"]
+[ext_resource type="Texture2D" uid="uid://df3o7jhc2pl5x" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00002.png" id="3_d4ph6"]
+[ext_resource type="Texture2D" uid="uid://drbb0ilwkbktf" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00003.png" id="4_8loh6"]
+[ext_resource type="Texture2D" uid="uid://ce6i2vjqy2gy5" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00004.png" id="5_oxgrn"]
+[ext_resource type="Texture2D" uid="uid://daf6g1qq7hk8w" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00005.png" id="6_xxetu"]
+[ext_resource type="Texture2D" uid="uid://i4ilkxprou31" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00006.png" id="7_w1rfu"]
+[ext_resource type="Texture2D" uid="uid://criog2xhhsf1x" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00007.png" id="8_y5py2"]
+[ext_resource type="Texture2D" uid="uid://rvmy210plhqg" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00008.png" id="9_6mklr"]
+[ext_resource type="Texture2D" uid="uid://dk46lcgg2o7j0" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00009.png" id="10_ddmct"]
+[ext_resource type="Texture2D" uid="uid://cdnfe5rusirr2" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00010.png" id="11_r7s30"]
+[ext_resource type="Texture2D" uid="uid://jpbglbtkaqq1" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00011.png" id="12_kv50j"]
+[ext_resource type="Texture2D" uid="uid://dvrid7ioitdr3" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00012.png" id="13_wibxb"]
+[ext_resource type="Texture2D" uid="uid://dnu63f6ktdot" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00013.png" id="14_8fo4q"]
+[ext_resource type="Texture2D" uid="uid://ckwd5uholo3c8" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00014.png" id="15_qy8d4"]
+[ext_resource type="Texture2D" uid="uid://c41vllxaa76fl" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00015.png" id="16_duuru"]
+[ext_resource type="Texture2D" uid="uid://dg6slvgp45lrx" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00016.png" id="17_cvfa5"]
+[ext_resource type="Texture2D" uid="uid://cqvykb7oe7vs" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00017.png" id="18_5fro8"]
+[ext_resource type="Texture2D" uid="uid://dk3650qpaf180" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00018.png" id="19_7oiau"]
+[ext_resource type="Texture2D" uid="uid://dvoxpi8lydgau" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00019.png" id="20_m1lgm"]
+[ext_resource type="Texture2D" uid="uid://b8dqqavu6pv7c" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00000.png" id="21_asktf"]
+[ext_resource type="Texture2D" uid="uid://ddqddin4yx18v" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00001.png" id="22_vbuuv"]
+[ext_resource type="Texture2D" uid="uid://281cyc4cqcxu" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00002.png" id="23_as2sm"]
+[ext_resource type="Texture2D" uid="uid://3o2s5503bt8n" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00003.png" id="24_88k5h"]
+[ext_resource type="Texture2D" uid="uid://w0j7urenq1it" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00004.png" id="25_iguff"]
+[ext_resource type="Texture2D" uid="uid://c87q3nhvh4uom" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00005.png" id="26_f7enf"]
+[ext_resource type="Texture2D" uid="uid://cdwcu30tywllj" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00006.png" id="27_ica7b"]
+[ext_resource type="Texture2D" uid="uid://d1x4iedmgdjlc" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00007.png" id="28_05gau"]
+[ext_resource type="Texture2D" uid="uid://dcjgk0iypteyl" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00008.png" id="29_3km3n"]
+[ext_resource type="Texture2D" uid="uid://b1nsa8nbqcccc" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00009.png" id="30_r3qo4"]
+[ext_resource type="Texture2D" uid="uid://c0f2r240da3sm" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00010.png" id="31_o4uai"]
+[ext_resource type="Texture2D" uid="uid://c8bpm1513y8dg" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00011.png" id="32_nosdc"]
+[ext_resource type="Texture2D" uid="uid://cgwdcl6v206c0" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00012.png" id="33_4g6si"]
+[ext_resource type="Texture2D" uid="uid://ieg6n7vfp5ob" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00013.png" id="34_k0ik3"]
+[ext_resource type="Texture2D" uid="uid://dtehwwdveqmwh" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00014.png" id="35_6r3aa"]
+[ext_resource type="Texture2D" uid="uid://bnfayybtx1r5e" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00015.png" id="36_keoib"]
+[ext_resource type="Texture2D" uid="uid://dxwomelitht7y" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00016.png" id="37_f6peo"]
+[ext_resource type="Texture2D" uid="uid://b1oovyc71imx7" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00017.png" id="38_wfsx0"]
+[ext_resource type="Texture2D" uid="uid://cy8mt1ou5m8i7" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00018.png" id="39_bqd2w"]
+[ext_resource type="Texture2D" uid="uid://de11te727xyyv" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump/JumpPlant_00019.png" id="40_wfgkg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tioub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqjvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pc8ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d4ph6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8loh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oxgrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xxetu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w1rfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y5py2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6mklr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ddmct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r7s30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kv50j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wibxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8fo4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qy8d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_duuru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cvfa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5fro8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7oiau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_m1lgm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_asktf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vbuuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_as2sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_88k5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iguff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_f7enf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ica7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_05gau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3km3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_r3qo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_o4uai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nosdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_4g6si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_k0ik3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6r3aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_keoib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_f6peo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wfsx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_bqd2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wfgkg")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjpn"]
+size = Vector2(336, 192)
+
+[node name="jumpad" type="CharacterBody2D"]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tioub")
+animation = &"jump"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_bcjpn")

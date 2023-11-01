@@ -17,3 +17,7 @@ func _on_medal_pressed():
 
 func _on_diary_pressed():
 	get_tree().change_scene_to_file("res://Diary/level/diary.tscn")
+
+
+func _on_ring_pressed():
+	get_tree().change_scene_to_file("res://ring/Levels-ring/test_level.tscn")

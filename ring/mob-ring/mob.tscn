@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://nwhol1450b1g"]
+[gd_scene load_steps=30 format=3 uid="uid://nwhol1450b1g"]
 
 [ext_resource type="Script" path="res://ring/mob-ring/mob.gd" id="1_u7yg7"]
 [ext_resource type="Texture2D" uid="uid://daew5xw2fmmwm" path="res://ring/Art-ring/mob/Boar/Hit-Vanish/Hit-Sheet-Black.png" id="2_jt2tc"]
@@ -101,9 +101,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vs3em")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -170,25 +170,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v35sf"]
-size = Vector2(896, 503)
+size = Vector2(784, 503)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v11yg"]
-radius = 2025.28
+radius = 1288.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4maky"]
+size = Vector2(848, 528)
 
 [node name="mob" type="CharacterBody2D"]
-collision_layer = 5
+collision_layer = 4
 script = ExtResource("1_u7yg7")
-SPEED = 900.0
+SPEED = 600.0
 
 [node name="mobsprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(3.63798e-12, 8)
+position = Vector2(0, -112)
 scale = Vector2(23.5313, 23.5313)
 sprite_frames = SubResource("SpriteFrames_te2v3")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 131.5)
 shape = SubResource("RectangleShape2D_v35sf")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
@@ -199,5 +201,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectionzone"]
 shape = SubResource("CircleShape2D_v11yg")
 
+[node name="hitbox" type="Area2D" parent="."]
+visible = false
+collision_layer = 32
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_4maky")
+
 [connection signal="body_entered" from="detectionzone" to="." method="_on_detectionzone_body_entered"]
 [connection signal="body_exited" from="detectionzone" to="." method="_on_detectionzone_body_exited"]
+[connection signal="area_shape_entered" from="hitbox" to="." method="_on_hitbox_area_shape_entered"]

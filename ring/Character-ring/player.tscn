@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://xxaoff7gwbrm"]
+[gd_scene load_steps=50 format=3 uid="uid://xxaoff7gwbrm"]
 
 [ext_resource type="Script" path="res://ring/Character-ring/player.gd" id="1_ppel8"]
 [ext_resource type="Texture2D" uid="uid://dognk3i7y6aga" path="res://ring/Art-ring/Mossy Assets/BlueWizard(player)/2BlueWizardWalk/Untitled-3.png" id="2_6uul2"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://ring/Character-ring/AirState.gd" id="10_8226m"]
 [ext_resource type="Script" path="res://ring/Character-ring/LandingState.gd" id="11_cgx2i"]
 [ext_resource type="Script" path="res://ring/Character-ring/Attack.gd" id="12_s5p43"]
-[ext_resource type="Script" path="res://ring/Character-ring/Labelstate.gd" id="14_kcsei"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ry2ya"]
 radius = 49.4845
@@ -463,10 +462,17 @@ size = Vector2(98.969, 280.412)
 radius = 32.9897
 height = 197.938
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_capjy"]
+radius = 51.5464
+height = 296.907
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbjpq"]
+size = Vector2(82.165, 29.5876)
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.97, 0.97)
 collision_layer = 2
-collision_mask = 1793
+collision_mask = 9985
 script = ExtResource("1_ppel8")
 speed = 1000.0
 
@@ -525,17 +531,8 @@ script = ExtResource("12_s5p43")
 return_state = NodePath("../Ground")
 can_move = false
 
-[node name="Labelstate" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-offset_left = -313.402
-offset_top = -313.402
-offset_right = -153.402
-offset_bottom = -287.402
-text = "state:"
-script = ExtResource("14_kcsei")
-state_machine = NodePath("../CharacterStateMachine")
-metadata/_edit_use_anchors_ = true
-
 [node name="ring detection" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 64
 
@@ -544,12 +541,35 @@ position = Vector2(1.47475e-06, 8.24743)
 shape = SubResource("RectangleShape2D_vmntp")
 
 [node name="portaldetection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portaldetection"]
 shape = SubResource("CapsuleShape2D_puagj")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 4096
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CapsuleShape2D_capjy")
+
+[node name="Timer" type="Timer" parent="hitbox"]
+wait_time = 0.2
+
+[node name="jumppad" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumppad"]
+position = Vector2(0, 145.361)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_kbjpq")
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/attack" method="_on_animation_tree_animation_finished"]
 [connection signal="area_shape_entered" from="ring detection" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="area_entered" from="portaldetection" to="." method="_on_portaldetection_area_entered"]
+[connection signal="body_shape_entered" from="hitbox" to="." method="_on_hitbox_body_shape_entered"]
+[connection signal="timeout" from="hitbox/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="jumppad" to="." method="_on_jumppad_body_entered"]
