@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://gellyynnm6d0"]
+
+[ext_resource type="Texture2D" uid="uid://yoen87q26dvm" path="res://diadem/diadem-png/green_poition0.PNG" id="1_52xpf"]
+[ext_resource type="PackedScene" uid="uid://doy22lwh4r0xb" path="res://diadem/ui/drink.tscn" id="2_1pqbs"]
+[ext_resource type="Script" path="res://diadem/items/green_poition_0.gd" id="2_26kx3"]
+
+[node name="GreenPoition0" type="Sprite2D"]
+position = Vector2(388, 163)
+texture = ExtResource("1_52xpf")
+script = ExtResource("2_26kx3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-3, -118, -21, -95, -25, -44, -72, 48, -55, 101, -33, 128, 26, 130, 62, 91, 69, 49, 48, -1, 30, -38, 22, -64, 21, -87)
+
+[node name="drink" parent="." instance=ExtResource("2_1pqbs")]
+visible = false

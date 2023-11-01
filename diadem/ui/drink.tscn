@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://doy22lwh4r0xb"]
+
+[ext_resource type="Script" path="res://diadem/ui/drink.gd" id="1_q3vb1"]
+[ext_resource type="Texture2D" uid="uid://dlxpd3mlsr3wg" path="res://diadem/diadem-png/drink_btn.png" id="1_txbyo"]
+[ext_resource type="Texture2D" uid="uid://byaohga015bf" path="res://diadem/diadem-png/drink_btn_pressed.png" id="2_fgrn1"]
+[ext_resource type="Texture2D" uid="uid://cmncsqo1b8mmf" path="res://diadem/diadem-png/cancel_btn_pressed.png" id="3_ls4jq"]
+[ext_resource type="Texture2D" uid="uid://x4hpqxnjgmve" path="res://diadem/diadem-png/cancel_btn.png" id="4_ebyjt"]
+
+[node name="drink" type="CanvasLayer"]
+script = ExtResource("1_q3vb1")
+
+[node name="drink_btn" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 522.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("1_txbyo")
+texture_pressed = ExtResource("2_fgrn1")
+
+[node name="cancel_btn" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 42.0
+offset_right = 149.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_ls4jq")
+texture_pressed = ExtResource("4_ebyjt")
+
+[connection signal="pressed" from="drink_btn" to="." method="_on_drink_btn_pressed"]
+[connection signal="pressed" from="cancel_btn" to="." method="_on_cancel_btn_pressed"]

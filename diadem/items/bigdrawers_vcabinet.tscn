@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcs3u1oryoejg"]
+
+[ext_resource type="Texture2D" uid="uid://d0874ryven6m6" path="res://diadem/diadem-png/bigdrawers_vcabinet.PNG" id="1_jkb8k"]
+[ext_resource type="Script" path="res://diadem/items/door_vcabinet.gd" id="2_3afdg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohjdq"]
+size = Vector2(75, 31)
+
+[node name="BigdrawersVcabinet" type="Sprite2D"]
+z_index = 1
+position = Vector2(271, 191)
+texture = ExtResource("1_jkb8k")
+script = ExtResource("2_3afdg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_ohjdq")

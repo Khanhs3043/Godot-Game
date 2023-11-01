@@ -1,0 +1,170 @@
+[gd_scene load_steps=14 format=3 uid="uid://ckxhn0b6tqbak"]
+
+[ext_resource type="Texture2D" uid="uid://d2w4ldevc54b4" path="res://diadem/diadem-png/spellbtn.png" id="1_dpbdh"]
+[ext_resource type="Script" path="res://diadem/ui/ui.gd" id="1_sumsg"]
+[ext_resource type="Texture2D" uid="uid://c2e7fapwauxgg" path="res://diadem/diadem-png/spellbtn_pressed.png" id="2_bm1ac"]
+[ext_resource type="Texture2D" uid="uid://brr3xjsukqshp" path="res://diadem/diadem-png/okbtn.png" id="4_lgead"]
+[ext_resource type="Texture2D" uid="uid://bdm67bh164l0j" path="res://diadem/diadem-png/inputspell.png" id="4_rs5dt"]
+[ext_resource type="Texture2D" uid="uid://b7t6nr7anadrj" path="res://diadem/diadem-png/okbtn_pressed.png" id="5_53812"]
+[ext_resource type="Texture2D" uid="uid://dcpd5uyih2qkk" path="res://diadem/diadem-png/guide.png" id="7_6jgch"]
+[ext_resource type="Texture2D" uid="uid://bdpyriv7i44tw" path="res://diadem/diadem-png/guide_pressed.png" id="8_o7muv"]
+[ext_resource type="Texture2D" uid="uid://dh1l4vahtf6n3" path="res://diadem/diadem-png/manuscript.png" id="8_sed5d"]
+[ext_resource type="Texture2D" uid="uid://dx0tvs2i10ppr" path="res://diadem/diadem-png/hint_mini.png" id="10_rek3x"]
+[ext_resource type="Texture2D" uid="uid://mvenooqqc2f4" path="res://diadem/diadem-png/hint.png" id="11_kmsi6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pcfje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hk4ao"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_sumsg")
+
+[node name="spell_btn" type="TextureButton" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -72.0
+offset_right = 463.0
+offset_bottom = 295.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("1_dpbdh")
+texture_pressed = ExtResource("2_bm1ac")
+
+[node name="input_spell" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -107.0
+offset_right = 23.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="input_spell"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -32.5
+offset_right = 190.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rs5dt")
+expand_mode = 1
+
+[node name="ok_btn" type="TextureButton" parent="input_spell"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.073
+anchor_top = 0.5
+anchor_right = 5.073
+anchor_bottom = 0.5
+offset_left = -46.92
+offset_top = -20.0
+offset_right = 145.08
+offset_bottom = 173.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_lgead")
+texture_pressed = ExtResource("5_53812")
+
+[node name="TextEdit" type="TextEdit" parent="input_spell"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -33.0
+offset_right = 128.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0.462745, 0.509804, 0.517647, 0)
+theme_override_constants/line_spacing = 12
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pcfje")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hk4ao")
+placeholder_text = "say something"
+wrap_mode = 1
+
+[node name="guide" type="TextureButton" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -140.0
+offset_right = 320.0
+offset_bottom = 231.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.17, 0.17)
+texture_normal = ExtResource("7_6jgch")
+texture_pressed = ExtResource("8_o7muv")
+
+[node name="manuscript" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -326.0
+offset_right = 209.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_sed5d")
+expand_mode = 1
+
+[node name="mini_hint" type="TextureButton" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -93.9999
+offset_right = 171.0
+offset_bottom = 101.0
+grow_vertical = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("10_rek3x")
+
+[node name="hint" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -233.0
+offset_right = 168.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_kmsi6")
+expand_mode = 1
+
+[connection signal="pressed" from="spell_btn" to="." method="_on_spell_btn_pressed"]
+[connection signal="pressed" from="input_spell/ok_btn" to="." method="_on_ok_btn_pressed"]
+[connection signal="pressed" from="guide" to="." method="_on_guide_pressed"]
+[connection signal="pressed" from="mini_hint" to="." method="_on_mini_hint_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1p68uq8unadp"]
+
+[ext_resource type="Texture2D" uid="uid://b0ic8duei0d6x" path="res://diadem/diadem-png/wall_lamp.PNG" id="1_8aot8"]
+[ext_resource type="Texture2D" uid="uid://bd8jfiy0g6lsp" path="res://diadem/diadem-png/light.PNG" id="2_jt6ep"]
+
+[node name="wall_lamp" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_8aot8")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 5.0
+texture = ExtResource("2_jt6ep")
+texture_scale = 5.0

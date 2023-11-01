@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://qi1cs8uyxxke"]
+
+[ext_resource type="Texture2D" uid="uid://cih4ixiq3u03r" path="res://diadem/diadem-png/pic2.png" id="1_iefex"]
+[ext_resource type="Script" path="res://diadem/items/pic_2.gd" id="1_kytjq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r8y8t"]
+radius = 40.0
+height = 98.0
+
+[node name="pic2" type="Area2D"]
+z_index = 1
+script = ExtResource("1_kytjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_r8y8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.521569, 0.541176, 0.580392, 1)
+position = Vector2(1, -2)
+scale = Vector2(0.0511764, 0.0511764)
+texture = ExtResource("1_iefex")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

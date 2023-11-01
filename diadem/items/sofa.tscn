@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddiyitkjom22r"]
+
+[ext_resource type="Texture2D" uid="uid://vxhff3p1k3qj" path="res://diadem/diadem-png/redsofa.PNG" id="1_vf56j"]
+
+[node name="sofa" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(257, 99, 225, 102, 207, 124, 202, 178, 209, 226, 214, 237, 197, 275, 309, 310, 385, 264, 371, 221, 377, 196, 372, 162, 348, 131, 275, 104)
+
+[node name="Redsofa" type="Sprite2D" parent="."]
+position = Vector2(304, 213)
+texture = ExtResource("1_vf56j")

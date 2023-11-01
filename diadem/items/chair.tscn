@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bikkcm1tkhp6a"]
+
+[ext_resource type="Texture2D" uid="uid://m3sbl5y7xfvs" path="res://diadem/diadem-png/chair.PNG" id="1_2p67v"]
+[ext_resource type="Script" path="res://diadem/items/chair.gd" id="2_s1t07"]
+
+[node name="chair" type="Node2D"]
+position = Vector2(0, -4)
+script = ExtResource("2_s1t07")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+z_index = -1
+position = Vector2(16, -119)
+polygon = PackedVector2Array(29, 2, -82, 1, -96, 77, -132, 111, -94, 135, -38, 147, 16, 142, 59, 134, 97, 113, 103, 102, 66, 61, 52, 72, 41, 66, 41, 49, 52, 43, 48, 28, 85, -86, 99, -120, 109, -131, 119, -136, 119, -144, 98, -151, 79, -144, 61, -100, 38, -31)
+
+[node name="Chair" type="Sprite2D" parent="."]
+position = Vector2(17, -119)
+texture = ExtResource("1_2p67v")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

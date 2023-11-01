@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xom4ahaqcns7"]
+
+[ext_resource type="Texture2D" uid="uid://x0kioey6hjwe" path="res://diadem/diadem-png/light_energy.png" id="1_28gog"]
+[ext_resource type="Script" path="res://diadem/items/light_energy.gd" id="2_8h352"]
+[ext_resource type="PackedScene" uid="uid://doy22lwh4r0xb" path="res://diadem/ui/drink.tscn" id="2_d07l1"]
+
+[node name="light_energy" type="Sprite2D"]
+z_index = 1
+position = Vector2(306.5, 188)
+scale = Vector2(1.30882, 1.32308)
+texture = ExtResource("1_28gog")
+script = ExtResource("2_8h352")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(1.14607, -25.6977)
+polygon = PackedVector2Array(-14, -33, -24.4494, -15.8721, -20.6292, 3.02325, -29.0337, 15.1163, -28.2697, 89.9419, 27.5056, 88.4302, 29.7977, 17.3837, 22, 5, 25.2135, -16.6279, 16, -35)
+
+[node name="drink" parent="." instance=ExtResource("2_d07l1")]
+visible = false

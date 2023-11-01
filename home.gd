@@ -21,3 +21,7 @@ func _on_diary_pressed():
 
 func _on_ring_pressed():
 	get_tree().change_scene_to_file("res://ring/Levels-ring/test_level.tscn")
+
+
+func _on_diadem_pressed():
+	get_tree().change_scene_to_file("res://diadem/diadem.tscn")

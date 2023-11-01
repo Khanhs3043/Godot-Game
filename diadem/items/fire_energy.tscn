@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://xfagod3tyjve"]
+
+[ext_resource type="Texture2D" uid="uid://xm3f1hjoqqfm" path="res://diadem/diadem-png/fire_energy.png" id="1_5rmib"]
+[ext_resource type="Script" path="res://diadem/items/FireEnergy.gd" id="2_ywrsx"]
+[ext_resource type="PackedScene" uid="uid://doy22lwh4r0xb" path="res://diadem/ui/drink.tscn" id="3_k8ueb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l7hvo"]
+radius = 26.0
+height = 132.0
+
+[node name="FireEnergy" type="Sprite2D"]
+position = Vector2(0, -1)
+texture = ExtResource("1_5rmib")
+script = ExtResource("2_ywrsx")
+
+[node name="drink" parent="." instance=ExtResource("3_k8ueb")]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_l7hvo")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

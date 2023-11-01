@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd4khajxaxv3y"]
+
+[ext_resource type="Script" path="res://diadem/items/chest.gd" id="1_qy8hx"]
+[ext_resource type="Texture2D" uid="uid://b2a6plh4sk1q" path="res://diadem/diadem-png/chest_close.png" id="2_tmguh"]
+[ext_resource type="Texture2D" uid="uid://bnblr3dtv1b0s" path="res://diadem/diadem-png/chest_open.png" id="3_5m2x8"]
+[ext_resource type="PackedScene" uid="uid://cg2fmm1lvlbtr" path="res://diadem/items/dd.tscn" id="5_cicj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv7c2"]
+size = Vector2(57, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6mww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tmguh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5m2x8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="chest" type="Node2D"]
+z_index = 1
+script = ExtResource("1_qy8hx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_gv7c2")
+
+[node name="ani" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(0.0521148, 0.0521148)
+sprite_frames = SubResource("SpriteFrames_e6mww")
+
+[node name="dd" parent="." instance=ExtResource("5_cicj6")]
+visible = false
+position = Vector2(7, 2)
+scale = Vector2(0.2, 0.2)
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

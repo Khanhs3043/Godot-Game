@@ -11,29 +11,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 298.0
-offset_top = 103.0
-offset_right = 439.0
-offset_bottom = 240.0
+offset_left = 606.0
+offset_top = 115.0
+offset_right = 747.0
+offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Diary"
 
 [node name="medal" type="Button" parent="."]
-offset_left = 518.0
-offset_top = 105.0
-offset_right = 668.0
-offset_bottom = 240.0
+offset_left = 329.0
+offset_top = 338.0
+offset_right = 479.0
+offset_bottom = 473.0
 text = "Medal"
 
 [node name="ring" type="Button" parent="."]
-offset_left = 736.0
-offset_top = 104.0
-offset_right = 886.0
-offset_bottom = 239.0
+offset_left = 611.0
+offset_top = 336.0
+offset_right = 761.0
+offset_bottom = 471.0
 text = "Ring
 "
+
+[node name="diadem" type="Button" parent="."]
+offset_left = 329.0
+offset_top = 117.0
+offset_right = 474.0
+offset_bottom = 252.0
+text = "Diadem"
 
 [connection signal="pressed" from="diary" to="." method="_on_diary_pressed"]
 [connection signal="pressed" from="medal" to="." method="_on_medal_pressed"]
 [connection signal="pressed" from="ring" to="." method="_on_ring_pressed"]
+[connection signal="pressed" from="diadem" to="." method="_on_diadem_pressed"]

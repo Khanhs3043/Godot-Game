@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5muhybsarxfu"]
+
+[ext_resource type="Texture2D" uid="uid://c1crxe64ca6ro" path="res://diadem/diadem-png/closeddoor.png" id="1_j2g6t"]
+[ext_resource type="Script" path="res://diadem/items/exit_door.gd" id="1_whlex"]
+[ext_resource type="Texture2D" uid="uid://68tcgwmq7uc1" path="res://diadem/diadem-png/opendoor.png" id="2_8mtut"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnxlj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j2g6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8mtut")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="exit_door" type="Node2D"]
+script = ExtResource("1_whlex")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.619608, 0.619608, 0.619608, 1)
+z_index = 2
+position = Vector2(579, 327)
+scale = Vector2(0.298283, 0.281445)
+sprite_frames = SubResource("SpriteFrames_qnxlj")
+frame_progress = 0.311258

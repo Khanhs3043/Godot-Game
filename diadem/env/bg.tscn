@@ -1,0 +1,349 @@
+[gd_scene load_steps=52 format=3 uid="uid://bvh01bwshl0u1"]
+
+[ext_resource type="Script" path="res://diadem/env/room.gd" id="1_a6oxs"]
+[ext_resource type="Texture2D" uid="uid://b0s385jl70agm" path="res://diadem/diadem-png/background.PNG" id="1_t4w1m"]
+[ext_resource type="Texture2D" uid="uid://c6cq53wf43ifd" path="res://diadem/diadem-png/left_shelf.PNG" id="2_lt1d6"]
+[ext_resource type="Texture2D" uid="uid://d4gkwyhdorkin" path="res://diadem/diadem-png/base.PNG" id="3_toaql"]
+[ext_resource type="Texture2D" uid="uid://crws7e2lg6tki" path="res://diadem/diadem-png/cabinet_noglass_nodrawers.PNG" id="5_8766g"]
+[ext_resource type="Texture2D" uid="uid://dogepiwnoily6" path="res://diadem/diadem-png/LNNX2449.PNG" id="8_7vv1r"]
+[ext_resource type="PackedScene" uid="uid://xfagod3tyjve" path="res://diadem/items/fire_energy.tscn" id="9_cefk5"]
+[ext_resource type="PackedScene" uid="uid://c75nb0om1s7xf" path="res://diadem/items/cup.tscn" id="10_ygo1k"]
+[ext_resource type="Texture2D" uid="uid://vi6syc0bp85p" path="res://diadem/diadem-png/red_darkgreen.PNG" id="12_xilir"]
+[ext_resource type="Texture2D" uid="uid://vxhff3p1k3qj" path="res://diadem/diadem-png/redsofa.PNG" id="13_16dfh"]
+[ext_resource type="Texture2D" uid="uid://d1yoas1l738si" path="res://diadem/diadem-png/UIJA4910.PNG" id="15_nuttl"]
+[ext_resource type="Texture2D" uid="uid://xcnbyx2yt3ki" path="res://diadem/diadem-png/GAYT1021.PNG" id="18_lqae0"]
+[ext_resource type="Texture2D" uid="uid://c1rt4lrppo0g1" path="res://diadem/diadem-png/gem.PNG" id="20_h2fe2"]
+[ext_resource type="Texture2D" uid="uid://mi5ruvkbgxst" path="res://diadem/diadem-png/blue_plant.PNG" id="22_bo6p7"]
+[ext_resource type="PackedScene" uid="uid://c1p68uq8unadp" path="res://diadem/items/wall_lamp.tscn" id="26_i6juy"]
+[ext_resource type="PackedScene" uid="uid://bawge1ku1y1r0" path="res://diadem/items/poition_pot.tscn" id="27_grrqs"]
+[ext_resource type="Texture2D" uid="uid://c3ty0fyrr7dot" path="res://diadem/diadem-png/right_glass.PNG" id="28_4atqj"]
+[ext_resource type="Texture2D" uid="uid://r6huo7ejwr3c" path="res://diadem/diadem-png/left_glass.PNG" id="29_rg1o4"]
+[ext_resource type="PackedScene" uid="uid://dcxseobhhy7jl" path="res://diadem/items/water_poition.tscn" id="31_26gw6"]
+[ext_resource type="PackedScene" uid="uid://dq8agbsia2di6" path="res://diadem/items/ice_energy.tscn" id="31_48d22"]
+[ext_resource type="PackedScene" uid="uid://djn4kl4jsv0p6" path="res://diadem/items/prophecy_ball.tscn" id="31_fr77b"]
+[ext_resource type="PackedScene" uid="uid://v20rtumsv4hx" path="res://diadem/items/passwords_frame.tscn" id="31_q7455"]
+[ext_resource type="PackedScene" uid="uid://bikkcm1tkhp6a" path="res://diadem/items/chair.tscn" id="31_ugij1"]
+[ext_resource type="PackedScene" uid="uid://dd4khajxaxv3y" path="res://diadem/items/chest.tscn" id="32_mir0h"]
+[ext_resource type="PackedScene" uid="uid://867ioh1ml6i3" path="res://diadem/items/key.tscn" id="34_bbdfu"]
+[ext_resource type="PackedScene" uid="uid://cekpdh7lvtmum" path="res://diadem/items/yellow_poition.tscn" id="35_v2te2"]
+[ext_resource type="PackedScene" uid="uid://pl0rhienpbqm" path="res://diadem/items/green_poition_1.tscn" id="36_35wt7"]
+[ext_resource type="PackedScene" uid="uid://bm87ieujbbphx" path="res://diadem/items/green_poition_2.tscn" id="37_3ibcu"]
+[ext_resource type="PackedScene" uid="uid://bbjmjarbfistc" path="res://diadem/items/green_poition_3.tscn" id="38_sdcmt"]
+[ext_resource type="PackedScene" uid="uid://8tp0toi0rkgv" path="res://diadem/items/green_poition_4.tscn" id="39_uyvs1"]
+[ext_resource type="PackedScene" uid="uid://gellyynnm6d0" path="res://diadem/items/green_poition_0.tscn" id="40_3r6vc"]
+[ext_resource type="PackedScene" uid="uid://cbw68slhsqm6f" path="res://diadem/items/green_poition_6.tscn" id="40_oncfh"]
+[ext_resource type="PackedScene" uid="uid://bvlqh07fg24ks" path="res://diadem/items/blue_poition_1.tscn" id="41_3evuc"]
+[ext_resource type="PackedScene" uid="uid://d3sy7cvsp2xe4" path="res://diadem/items/blue_poition_2.tscn" id="42_lqsyi"]
+[ext_resource type="PackedScene" uid="uid://bqmxjogr6xfsp" path="res://diadem/items/blue_poition_4.tscn" id="43_4luc3"]
+[ext_resource type="PackedScene" uid="uid://b7u0y5xleyhfa" path="res://diadem/items/blue_poition_5.tscn" id="44_iov6t"]
+[ext_resource type="PackedScene" uid="uid://cubujetbpdih0" path="res://diadem/items/blue_poition_7.tscn" id="45_k2okr"]
+[ext_resource type="PackedScene" uid="uid://bpd37gi62dd6w" path="res://diadem/items/fire_poition.tscn" id="46_wynh6"]
+[ext_resource type="PackedScene" uid="uid://dluyv6tp8mho7" path="res://diadem/items/crystal_energy.tscn" id="47_6xox2"]
+[ext_resource type="PackedScene" uid="uid://bw1skdr0tqd6n" path="res://diadem/items/door_vcabinet.tscn" id="48_kcr1w"]
+[ext_resource type="PackedScene" uid="uid://xom4ahaqcns7" path="res://diadem/items/light_energy.tscn" id="48_wtole"]
+[ext_resource type="Texture2D" uid="uid://dgggwthnr664r" path="res://diadem/diadem-png/hint2.png" id="49_5ajec"]
+[ext_resource type="PackedScene" uid="uid://bv1h2smsx44jl" path="res://diadem/items/drawers_vcabinet.tscn" id="49_dsml2"]
+[ext_resource type="PackedScene" uid="uid://cc10fr41mghgi" path="res://diadem/items/minihint.tscn" id="50_1fgh4"]
+[ext_resource type="Texture2D" uid="uid://bg86cm8lw5y1y" path="res://diadem/diadem-png/hint3.png" id="50_30g65"]
+[ext_resource type="Texture2D" uid="uid://mh4ac4s2182i" path="res://diadem/diadem-png/hint1.png" id="50_ht8k6"]
+[ext_resource type="PackedScene" uid="uid://dcs3u1oryoejg" path="res://diadem/items/bigdrawers_vcabinet.tscn" id="50_mkmq1"]
+[ext_resource type="PackedScene" uid="uid://khh0tm0pkaxi" path="res://diadem/items/mirror.tscn" id="50_rjcib"]
+[ext_resource type="PackedScene" uid="uid://c7so8grigepyp" path="res://diadem/items/pic_1.tscn" id="51_5mlex"]
+[ext_resource type="PackedScene" uid="uid://qi1cs8uyxxke" path="res://diadem/items/pic_2.tscn" id="51_6ey2a"]
+[ext_resource type="PackedScene" uid="uid://bes8l2dowetvl" path="res://diadem/items/drawers_hcabinet.tscn" id="51_soaee"]
+
+[node name="room" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_a6oxs")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(577, 324)
+scale = Vector2(0.769412, 0.769412)
+texture = ExtResource("1_t4w1m")
+metadata/_edit_lock_ = true
+
+[node name="LeftShelf" type="Sprite2D" parent="."]
+position = Vector2(88, 286)
+scale = Vector2(0.582927, 0.582927)
+texture = ExtResource("2_lt1d6")
+
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(183, 327)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("3_toaql")
+
+[node name="CabinetNoglassNodrawers" type="Sprite2D" parent="."]
+position = Vector2(277, 193)
+scale = Vector2(0.688596, 0.688597)
+texture = ExtResource("5_8766g")
+metadata/_edit_lock_ = true
+
+[node name="Lnnx2449" type="Sprite2D" parent="."]
+position = Vector2(578, 269)
+scale = Vector2(0.608871, 0.608871)
+texture = ExtResource("8_7vv1r")
+
+[node name="cup" parent="." instance=ExtResource("10_ygo1k")]
+position = Vector2(1072, 153)
+
+[node name="RedDarkgreen" type="Sprite2D" parent="."]
+position = Vector2(503, 438)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("12_xilir")
+
+[node name="Redsofa" type="Sprite2D" parent="."]
+position = Vector2(338, 416)
+texture = ExtResource("13_16dfh")
+
+[node name="Uija4910" type="Sprite2D" parent="."]
+position = Vector2(1065, 218)
+scale = Vector2(0.754386, 0.754386)
+texture = ExtResource("15_nuttl")
+metadata/_edit_lock_ = true
+
+[node name="Gayt1021" type="Sprite2D" parent="."]
+position = Vector2(389, 150)
+scale = Vector2(0.738806, 0.738806)
+texture = ExtResource("18_lqae0")
+
+[node name="Gayt1022" type="Sprite2D" parent="."]
+position = Vector2(805, 151)
+scale = Vector2(0.738806, 0.738806)
+texture = ExtResource("18_lqae0")
+
+[node name="Gem" type="Sprite2D" parent="."]
+position = Vector2(385, 256)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_h2fe2")
+
+[node name="BluePlant" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(305, 172)
+texture = ExtResource("22_bo6p7")
+
+[node name="wall_lamp" parent="." instance=ExtResource("26_i6juy")]
+position = Vector2(788, 46)
+
+[node name="wall_lamp2" parent="." instance=ExtResource("26_i6juy")]
+position = Vector2(400, 44)
+scale = Vector2(-1, 1)
+metadata/_edit_lock_ = true
+
+[node name="poition_pot" parent="." instance=ExtResource("27_grrqs")]
+position = Vector2(184, 265)
+scale = Vector2(0.658654, 0.658654)
+metadata/_edit_lock_ = true
+
+[node name="RightGlass" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(310, 150)
+scale = Vector2(0.710526, 0.710526)
+texture = ExtResource("28_4atqj")
+
+[node name="LeftGlass" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(239.25, 136.963)
+scale = Vector2(0.698864, 0.698864)
+texture = ExtResource("29_rg1o4")
+
+[node name="Sprite2D" parent="." instance=ExtResource("31_ugij1")]
+position = Vector2(764, 434)
+
+[node name="ProphecyBall" parent="." instance=ExtResource("31_fr77b")]
+position = Vector2(629, 201)
+scale = Vector2(0.737179, 0.737179)
+
+[node name="passwords_frame" parent="." instance=ExtResource("31_q7455")]
+position = Vector2(1073, 292)
+scale = Vector2(0.768657, 0.768657)
+
+[node name="chest" parent="." instance=ExtResource("32_mir0h")]
+position = Vector2(545, 203)
+
+[node name="key" parent="." instance=ExtResource("34_bbdfu")]
+position = Vector2(1072, 316)
+scale = Vector2(0.5, 0.5)
+
+[node name="poitions" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(103, 302)
+scale = Vector2(0.125856, 0.125856)
+
+[node name="fire_energy" parent="poitions" instance=ExtResource("9_cefk5")]
+z_index = 1
+position = Vector2(29.9945, -815.714)
+scale = Vector2(2.8314, 2.8314)
+
+[node name="IceEnergy" parent="poitions" instance=ExtResource("31_48d22")]
+position = Vector2(8001.2, -874.014)
+scale = Vector2(3.15486, 3.15486)
+
+[node name="WaterPoition" parent="poitions" instance=ExtResource("31_26gw6")]
+position = Vector2(7858.18, -1032.93)
+scale = Vector2(1.93271, 1.93271)
+
+[node name="YellowPoition" parent="poitions" instance=ExtResource("35_v2te2")]
+position = Vector2(3.22787, 2.39603)
+scale = Vector2(1.04422, 1.04422)
+
+[node name="GreenPoition2" parent="poitions" instance=ExtResource("37_3ibcu")]
+position = Vector2(-87.4013, -730.993)
+scale = Vector2(1.38284, 1.38284)
+
+[node name="GreenPoition1" parent="poitions" instance=ExtResource("36_35wt7")]
+position = Vector2(-184.906, 109.671)
+scale = Vector2(1.1112, 1.1112)
+
+[node name="GreenPoition3" parent="poitions" instance=ExtResource("38_sdcmt")]
+position = Vector2(-143.02, 532.353)
+
+[node name="GreenPoition6" parent="poitions" instance=ExtResource("40_oncfh")]
+position = Vector2(-230.422, -659.483)
+scale = Vector2(1.16213, 1.16213)
+
+[node name="GreenPoition4" parent="poitions" instance=ExtResource("39_uyvs1")]
+position = Vector2(-293.986, -190.694)
+scale = Vector2(1.13991, 1.13991)
+
+[node name="GreenPoition0" parent="poitions" instance=ExtResource("40_3r6vc")]
+modulate = Color(0.517647, 0.517647, 0.517647, 1)
+z_index = 1
+position = Vector2(1112.38, -1064.71)
+scale = Vector2(1.2, 1.2)
+
+[node name="BluePoition1" parent="poitions" instance=ExtResource("41_3evuc")]
+position = Vector2(-221.487, 208.93)
+scale = Vector2(1.74744, 1.74744)
+
+[node name="BluePoition2" parent="poitions" instance=ExtResource("42_lqsyi")]
+position = Vector2(-309.877, -564.136)
+scale = Vector2(2.16385, 2.21998)
+
+[node name="BluePoition4" parent="poitions" instance=ExtResource("43_4luc3")]
+position = Vector2(-406.455, -79.4288)
+scale = Vector2(1.62315, 1.58934)
+
+[node name="BluePoition5" parent="poitions" instance=ExtResource("44_iov6t")]
+position = Vector2(54.1657, 333.003)
+scale = Vector2(1.45782, 1.45782)
+
+[node name="BluePoition7" parent="poitions" instance=ExtResource("45_k2okr")]
+position = Vector2(-166.857, -262.204)
+scale = Vector2(1.50284, 1.50284)
+
+[node name="FirePoition" parent="poitions" instance=ExtResource("46_wynh6")]
+position = Vector2(-359.046, 253.651)
+scale = Vector2(1.19324, 1.19324)
+
+[node name="crystal_energy" parent="poitions" instance=ExtResource("47_6xox2")]
+position = Vector2(-63.5646, -341.66)
+scale = Vector2(1.90254, 1.92327)
+
+[node name="light_energy" parent="poitions" instance=ExtResource("48_wtole")]
+position = Vector2(-22.0618, 409.407)
+scale = Vector2(1.7369, 1.75583)
+
+[node name="hint" type="Node2D" parent="."]
+
+[node name="Hint3" type="Sprite2D" parent="hint"]
+self_modulate = Color(1, 1, 1, 0.572549)
+position = Vector2(594, 81)
+scale = Vector2(0.300489, 0.300489)
+texture = ExtResource("50_30g65")
+
+[node name="Hint2" type="Sprite2D" parent="hint"]
+position = Vector2(849, 66)
+rotation = 1.61094
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("49_5ajec")
+
+[node name="Hint1" type="Sprite2D" parent="hint"]
+modulate = Color(0.619608, 1, 0.356863, 0.623529)
+z_index = 2
+position = Vector2(628.822, 188.062)
+scale = Vector2(0.0777066, 0.077756)
+texture = ExtResource("50_ht8k6")
+
+[node name="mirror" parent="." instance=ExtResource("50_rjcib")]
+position = Vector2(887, 70)
+scale = Vector2(0.6, 0.6)
+
+[node name="pic1" parent="." instance=ExtResource("51_5mlex")]
+position = Vector2(501, 64)
+
+[node name="pic2" parent="." instance=ExtResource("51_6ey2a")]
+position = Vector2(654, 79)
+
+[node name="minihint" parent="." instance=ExtResource("50_1fgh4")]
+position = Vector2(491, 276)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+
+[node name="minihint_pos" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="minihint_pos"]
+position = Vector2(491, 276)
+
+[node name="Marker2D2" type="Marker2D" parent="minihint_pos"]
+position = Vector2(502, 307)
+
+[node name="Marker2D3" type="Marker2D" parent="minihint_pos"]
+position = Vector2(648, 275)
+
+[node name="Marker2D4" type="Marker2D" parent="minihint_pos"]
+position = Vector2(658, 304)
+
+[node name="Marker2D5" type="Marker2D" parent="minihint_pos"]
+position = Vector2(301, 242)
+
+[node name="Marker2D6" type="Marker2D" parent="minihint_pos"]
+position = Vector2(310, 266)
+
+[node name="Marker2D7" type="Marker2D" parent="minihint_pos"]
+position = Vector2(298, 291)
+
+[node name="Marker2D8" type="Marker2D" parent="minihint_pos"]
+position = Vector2(234, 291)
+
+[node name="Marker2D9" type="Marker2D" parent="minihint_pos"]
+position = Vector2(235, 212)
+
+[node name="DoorVcabinet" parent="." instance=ExtResource("48_kcr1w")]
+position = Vector2(238, 267)
+scale = Vector2(0.702761, 0.702761)
+
+[node name="drawers_vcabinet" parent="." instance=ExtResource("49_dsml2")]
+position = Vector2(300, 242)
+scale = Vector2(0.671875, 0.671875)
+
+[node name="drawers_vcabinet2" parent="." instance=ExtResource("49_dsml2")]
+position = Vector2(300, 268)
+scale = Vector2(0.671875, 0.671875)
+
+[node name="drawers_vcabinet3" parent="." instance=ExtResource("49_dsml2")]
+position = Vector2(300, 292)
+scale = Vector2(0.671875, 0.671875)
+
+[node name="BigdrawersVcabinet" parent="." instance=ExtResource("50_mkmq1")]
+position = Vector2(237, 212)
+scale = Vector2(0.713415, 0.713415)
+
+[node name="drawers_hcabinet" parent="." instance=ExtResource("51_soaee")]
+position = Vector2(491.633, 276.375)
+scale = Vector2(0.586736, 0.586736)
+
+[node name="drawers_hcabinet2" parent="." instance=ExtResource("51_soaee")]
+position = Vector2(492, 307)
+scale = Vector2(0.586736, 0.586736)
+
+[node name="drawers_hcabinet3" parent="." instance=ExtResource("51_soaee")]
+position = Vector2(657, 276)
+scale = Vector2(0.586736, 0.586736)
+
+[node name="drawers_hcabinet4" parent="." instance=ExtResource("51_soaee")]
+position = Vector2(657, 307)
+scale = Vector2(0.586736, 0.586736)
+
+[connection signal="input_event" from="minihint" to="." method="_on_minihint_input_event"]

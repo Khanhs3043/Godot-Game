@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcxseobhhy7jl"]
+
+[ext_resource type="Texture2D" uid="uid://cwqi4yg8o20b8" path="res://diadem/diadem-png/water_poition.PNG" id="1_nlhf2"]
+[ext_resource type="Script" path="res://diadem/items/water_poition.gd" id="2_yxkc2"]
+[ext_resource type="PackedScene" uid="uid://doy22lwh4r0xb" path="res://diadem/ui/drink.tscn" id="3_pcrpc"]
+
+[node name="WaterPoition" type="Sprite2D"]
+z_index = 1
+position = Vector2(196, 199)
+texture = ExtResource("1_nlhf2")
+script = ExtResource("2_yxkc2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-8, -116, -26, -96, -27, -66, -39, -23, -70, 36, -71, 74, -50, 107, -32, 128, 17, 129, 32, 125, 62, 87, 67, 45, 45, -2, 24, -36, 15, -67, 18, -86, 15, -100, 1, -118)
+
+[node name="drink" parent="." instance=ExtResource("3_pcrpc")]
+visible = false
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

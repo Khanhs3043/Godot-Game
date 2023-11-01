@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bes8l2dowetvl"]
+
+[ext_resource type="Texture2D" uid="uid://et0ap68ae4h2" path="res://diadem/diadem-png/drawers_hcabinet.PNG" id="1_3yqel"]
+[ext_resource type="Script" path="res://diadem/items/door_vcabinet.gd" id="2_r1br3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fq8m"]
+size = Vector2(112, 32)
+
+[node name="drawers_hcabinet" type="Sprite2D"]
+z_index = 1
+position = Vector2(258, 243)
+texture = ExtResource("1_3yqel")
+script = ExtResource("2_r1br3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_8fq8m")

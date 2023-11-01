@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg2fmm1lvlbtr"]
+
+[ext_resource type="Script" path="res://diadem/items/dd.gd" id="1_bif4w"]
+[ext_resource type="Texture2D" uid="uid://drr21jh17btrb" path="res://diadem/diadem-png/diadem.png" id="1_hqj12"]
+[ext_resource type="Texture2D" uid="uid://de2240e8ega4d" path="res://diadem/diadem-png/ray.png" id="3_cegtm"]
+
+[node name="dd" type="Area2D"]
+position = Vector2(24, 12)
+script = ExtResource("1_bif4w")
+
+[node name="Ray" type="Sprite2D" parent="."]
+modulate = Color(0.988235, 1, 1, 0.843137)
+position = Vector2(-22, -12)
+scale = Vector2(0.388461, 0.388462)
+texture = ExtResource("3_cegtm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-257.107, -167.336)
+scale = Vector2(0.828947, 0.828947)
+polygon = PackedVector2Array(254.668, 157.23, 273.97, 154.817, 273.97, 148.786, 284.827, 147.579, 290.343, 158.145, 301.716, 158.437, 315, 166, 324.637, 193.421, 329.462, 236.849, 321.017, 244.087, 312.573, 244.087, 325.843, 234.437, 325.843, 216.341, 316, 200, 286.033, 184.976, 284.827, 207.897, 277.589, 211.516, 276.383, 186.183, 263.113, 193.421, 242.605, 201.865, 237.779, 219.96, 243.811, 238.056, 235.367, 230.817, 235.367, 209.103, 237.779, 192.214, 240.192, 174.119)
+
+[node name="Diadem" type="Sprite2D" parent="."]
+position = Vector2(-26, 2)
+scale = Vector2(0.288186, 0.288186)
+texture = ExtResource("1_hqj12")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

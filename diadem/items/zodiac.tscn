@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciqahgy3jjlsj"]
+
+[ext_resource type="Texture2D" uid="uid://bueytq0pgqp48" path="res://diadem/diadem-png/zodiac.png" id="1_8d1m8"]
+[ext_resource type="Script" path="res://diadem/items/zodiac.gd" id="2_udtp4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_co5tc"]
+radius = 224.39
+
+[node name="Zodiac" type="Sprite2D"]
+z_index = 1
+position = Vector2(289, 315)
+scale = Vector2(0.209267, 0.209267)
+texture = ExtResource("1_8d1m8")
+script = ExtResource("2_udtp4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_co5tc")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

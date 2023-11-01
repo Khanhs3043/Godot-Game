@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq8agbsia2di6"]
+
+[ext_resource type="Texture2D" uid="uid://bjgjq7uk0aknt" path="res://diadem/diadem-png/ice_energy.png" id="1_1nfyf"]
+[ext_resource type="Script" path="res://diadem/items/ice_energy.gd" id="2_t4s38"]
+[ext_resource type="PackedScene" uid="uid://doy22lwh4r0xb" path="res://diadem/ui/drink.tscn" id="3_55xwo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24axq"]
+radius = 27.0
+height = 122.0
+
+[node name="IceEnergy" type="Sprite2D"]
+z_index = 1
+position = Vector2(219, 149)
+texture = ExtResource("1_1nfyf")
+script = ExtResource("2_t4s38")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_24axq")
+
+[node name="drink" parent="." instance=ExtResource("3_55xwo")]
+visible = false
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

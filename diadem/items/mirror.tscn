@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://khh0tm0pkaxi"]
+
+[ext_resource type="Texture2D" uid="uid://bq0am78qhxsri" path="res://diadem/diadem-png/mirror.PNG" id="1_h8w0c"]
+[ext_resource type="Script" path="res://diadem/items/mirror.gd" id="1_oslqr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8v2w"]
+radius = 79.0
+height = 260.0
+
+[node name="mirror" type="Area2D"]
+script = ExtResource("1_oslqr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_o8v2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h8w0c")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
