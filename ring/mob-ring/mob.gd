@@ -6,6 +6,10 @@ extends CharacterBody2D
 var chase : bool = false
 var player 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+signal health_changed
+func _ready():
+	$healthbar2.initialize("health_changed", health)
+
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	player = get_node("../Player")
@@ -41,3 +45,4 @@ func _on_detectionzone_body_exited(body):
 
 func _on_hitbox_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	health -= 10
+	emit_signal("health_changed", health)

@@ -18,10 +18,8 @@ var leaf_collected : bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2 = Vector2.ZERO
 signal facing_direction_changed(facing_right : bool)
-
 func _ready():
 	animation_tree.active = true
-
 func _physics_process(delta):
 	#trong luc
 	if not is_on_floor():
