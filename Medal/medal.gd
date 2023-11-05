@@ -67,5 +67,6 @@ func _on_air_area_entered(area):
 func _on_exit_body_entered(body):
 	if body.name == "player" and body.locket_in_hand:
 		win = true
+		Global.locket = true
 	if body.name == "player" and not body.locket_in_hand:
 		lose = true

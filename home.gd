@@ -9,8 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Global.diadem:
-		$diadem.modulate= Color(33,153,255)
-
+		$diadem.modulate= Color(33,153,253)
+	if Global.diary:
+		$diary.modulate= Color(33,153,253)
+	if Global.locket:
+		$medal.modulate= Color(33,153,253)
 
 func _on_medal_pressed():
 	get_tree().change_scene_to_file("res://Medal/medal.tscn")

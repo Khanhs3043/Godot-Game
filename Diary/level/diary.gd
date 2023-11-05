@@ -67,6 +67,7 @@ func _on_exit_body_entered(body):
 	if body.name == "player" and Global.have_diary:
 		print("Win!")
 		$ui.display_win()
+		Global.diary =  true
 	else: 
 		print("Lose!")
 		$ui.display_lose()
