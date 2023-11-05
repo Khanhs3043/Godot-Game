@@ -21,7 +21,6 @@ func _process(_delta):
 
 func _on_area_2d_area_shape_entered(_area_rid, area, _area_shape_index, _local_shape_index):
 	if area.has_method("is_key"):
-		area.hide()
 		can_open = true
 	else: can_open = false
 

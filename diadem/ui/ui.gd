@@ -4,7 +4,6 @@ var can_spell = false
 var spell
 var open_guide = false
 var open_hint = false
-
 func show_hint():
 	$mini_hint.show()
 func _ready():
@@ -31,11 +30,12 @@ func _on_spell_btn_pressed():
 	else:
 		can_spell = true
 
-
 func _on_ok_btn_pressed():
 	spell = $input_spell/TextEdit.get_line(0).to_lower()
 	$input_spell/TextEdit.text = ""
-
+	#if spell == "lumos":
+	get_tree().paused = false
+	
 
 func _on_guide_pressed():
 	if open_guide:

@@ -9,7 +9,6 @@ var lose = false
 func _ready():
 	bubblepos = $bubbleborn.get_children()
 	create_bubble()
-		
 func create_bubble():
 	for i in bubblepos:
 		listpos.append(i.global_position)

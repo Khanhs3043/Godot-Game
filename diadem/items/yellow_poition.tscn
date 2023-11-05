@@ -17,5 +17,3 @@ polygon = PackedVector2Array(-3, -124, -22, -102, -22, -66, -48, -11, -71, 38, -
 
 [node name="drink" parent="." instance=ExtResource("3_fv6fn")]
 visible = false
-
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5muhybsarxfu"]
+[gd_scene load_steps=7 format=3 uid="uid://b5muhybsarxfu"]
 
 [ext_resource type="Texture2D" uid="uid://c1crxe64ca6ro" path="res://diadem/diadem-png/closeddoor.png" id="1_j2g6t"]
 [ext_resource type="Script" path="res://diadem/items/exit_door.gd" id="1_whlex"]
 [ext_resource type="Texture2D" uid="uid://68tcgwmq7uc1" path="res://diadem/diadem-png/opendoor.png" id="2_8mtut"]
+[ext_resource type="Texture2D" uid="uid://dubmwhudt0lks" path="res://diadem/diadem-png/left_arrow_btn.png" id="4_4unk1"]
+[ext_resource type="Texture2D" uid="uid://di3btfmgksjjw" path="res://diadem/diadem-png/left_arrow_btn_pressed.png" id="5_cyf6o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnxlj"]
 animations = [{
@@ -18,13 +20,34 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="exit_door" type="Node2D"]
+[node name="exit_door" type="CanvasLayer"]
 script = ExtResource("1_whlex")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.619608, 0.619608, 0.619608, 1)
-z_index = 2
 position = Vector2(579, 327)
 scale = Vector2(0.298283, 0.281445)
 sprite_frames = SubResource("SpriteFrames_qnxlj")
-frame_progress = 0.311258
+
+[node name="go_inside" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -48.0
+offset_right = 96.0
+offset_bottom = 48.0
+grow_vertical = 2
+texture_normal = ExtResource("4_4unk1")
+texture_pressed = ExtResource("5_cyf6o")
+
+[node name="exit" type="TextureButton" parent="."]
+offset_left = 621.0
+offset_top = 281.0
+offset_right = 717.0
+offset_bottom = 377.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("4_4unk1")
+texture_pressed = ExtResource("5_cyf6o")
+
+[connection signal="pressed" from="go_inside" to="." method="_on_go_inside_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

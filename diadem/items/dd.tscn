@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://de2240e8ega4d" path="res://diadem/diadem-png/ray.png" id="3_cegtm"]
 
 [node name="dd" type="Area2D"]
+z_index = 2
 position = Vector2(24, 12)
 script = ExtResource("1_bif4w")
 

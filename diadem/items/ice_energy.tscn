@@ -21,5 +21,3 @@ shape = SubResource("CapsuleShape2D_24axq")
 
 [node name="drink" parent="." instance=ExtResource("3_55xwo")]
 visible = false
-
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

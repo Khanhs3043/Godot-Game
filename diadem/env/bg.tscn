@@ -118,18 +118,22 @@ position = Vector2(385, 256)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_h2fe2")
 
+[node name="Gem2" type="Sprite2D" parent="."]
+position = Vector2(802, 260)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_h2fe2")
+
 [node name="BluePlant" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(305, 172)
 texture = ExtResource("22_bo6p7")
 
 [node name="wall_lamp" parent="." instance=ExtResource("26_i6juy")]
-position = Vector2(788, 46)
+position = Vector2(779, 34)
 
 [node name="wall_lamp2" parent="." instance=ExtResource("26_i6juy")]
-position = Vector2(400, 44)
+position = Vector2(400, 36)
 scale = Vector2(-1, 1)
-metadata/_edit_lock_ = true
 
 [node name="poition_pot" parent="." instance=ExtResource("27_grrqs")]
 position = Vector2(184, 265)
@@ -177,34 +181,34 @@ position = Vector2(29.9945, -815.714)
 scale = Vector2(2.8314, 2.8314)
 
 [node name="IceEnergy" parent="poitions" instance=ExtResource("31_48d22")]
-position = Vector2(8001.2, -874.014)
+position = Vector2(8080.66, -866.069)
 scale = Vector2(3.15486, 3.15486)
 
 [node name="WaterPoition" parent="poitions" instance=ExtResource("31_26gw6")]
-position = Vector2(7858.18, -1032.93)
-scale = Vector2(1.93271, 1.93271)
+position = Vector2(7909.83, -1009.52)
+scale = Vector2(1.98641, 1.92946)
 
 [node name="YellowPoition" parent="poitions" instance=ExtResource("35_v2te2")]
 position = Vector2(3.22787, 2.39603)
 scale = Vector2(1.04422, 1.04422)
 
 [node name="GreenPoition2" parent="poitions" instance=ExtResource("37_3ibcu")]
-position = Vector2(-87.4013, -730.993)
+position = Vector2(-103.293, -723.049)
 scale = Vector2(1.38284, 1.38284)
 
 [node name="GreenPoition1" parent="poitions" instance=ExtResource("36_35wt7")]
-position = Vector2(-184.906, 109.671)
+position = Vector2(-166.857, 95.347)
 scale = Vector2(1.1112, 1.1112)
 
 [node name="GreenPoition3" parent="poitions" instance=ExtResource("38_sdcmt")]
 position = Vector2(-143.02, 532.353)
 
 [node name="GreenPoition6" parent="poitions" instance=ExtResource("40_oncfh")]
-position = Vector2(-230.422, -659.483)
+position = Vector2(-262.204, -635.647)
 scale = Vector2(1.16213, 1.16213)
 
 [node name="GreenPoition4" parent="poitions" instance=ExtResource("39_uyvs1")]
-position = Vector2(-293.986, -190.694)
+position = Vector2(-286.041, -206.585)
 scale = Vector2(1.13991, 1.13991)
 
 [node name="GreenPoition0" parent="poitions" instance=ExtResource("40_3r6vc")]
@@ -218,7 +222,7 @@ position = Vector2(-221.487, 208.93)
 scale = Vector2(1.74744, 1.74744)
 
 [node name="BluePoition2" parent="poitions" instance=ExtResource("42_lqsyi")]
-position = Vector2(-309.877, -564.136)
+position = Vector2(-349.606, -548.245)
 scale = Vector2(2.16385, 2.21998)
 
 [node name="BluePoition4" parent="poitions" instance=ExtResource("43_4luc3")]
@@ -242,15 +246,15 @@ position = Vector2(-63.5646, -341.66)
 scale = Vector2(1.90254, 1.92327)
 
 [node name="light_energy" parent="poitions" instance=ExtResource("48_wtole")]
-position = Vector2(-22.0618, 409.407)
+position = Vector2(-39.7279, 421.116)
 scale = Vector2(1.7369, 1.75583)
 
 [node name="hint" type="Node2D" parent="."]
 
 [node name="Hint3" type="Sprite2D" parent="hint"]
 self_modulate = Color(1, 1, 1, 0.572549)
-position = Vector2(594, 81)
-scale = Vector2(0.300489, 0.300489)
+position = Vector2(592, 78)
+scale = Vector2(0.282503, 0.282503)
 texture = ExtResource("50_30g65")
 
 [node name="Hint2" type="Sprite2D" parent="hint"]

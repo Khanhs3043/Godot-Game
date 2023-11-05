@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_2b1gq")
 
 [node name="player" parent="." instance=ExtResource("1_skv2m")]
 position = Vector2(-299, -279)
+speed = 6500
 
 [node name="enemies" type="Node2D" parent="."]
 

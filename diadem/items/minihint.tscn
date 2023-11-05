@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc10fr41mghgi"]
+[gd_scene load_steps=4 format=3 uid="uid://cc10fr41mghgi"]
 
 [ext_resource type="Texture2D" uid="uid://dx0tvs2i10ppr" path="res://diadem/diadem-png/hint_mini.png" id="1_kuu0u"]
+[ext_resource type="Script" path="res://diadem/items/minihint.gd" id="1_o7utx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6ohe"]
 size = Vector2(26, 36)
 
 [node name="minihint" type="Area2D"]
+script = ExtResource("1_o7utx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u6ohe")
@@ -13,3 +15,6 @@ shape = SubResource("RectangleShape2D_u6ohe")
 [node name="HintMini" type="Sprite2D" parent="."]
 scale = Vector2(0.195946, 0.195946)
 texture = ExtResource("1_kuu0u")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
