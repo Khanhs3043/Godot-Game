@@ -91,6 +91,7 @@ z={
 2d_physics/layer_12="projectiles"
 2d_physics/layer_13="playerhitbox"
 2d_physics/layer_14="jumppad"
+2d_physics/layer_15="playerfeet"
 
 [physics]
 

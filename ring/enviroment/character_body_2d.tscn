@@ -1,5 +1,6 @@
-[gd_scene load_steps=43 format=3 uid="uid://bt4ilk3wu116x"]
+[gd_scene load_steps=45 format=3 uid="uid://bt4ilk3wu116x"]
 
+[ext_resource type="Script" path="res://ring/enviroment/jumpad.gd" id="1_5rpqe"]
 [ext_resource type="Texture2D" uid="uid://db30cmwsxctxc" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00000.png" id="1_iqjvr"]
 [ext_resource type="Texture2D" uid="uid://01oxxi4wjohu" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00001.png" id="2_pc8ac"]
 [ext_resource type="Texture2D" uid="uid://df3o7jhc2pl5x" path="res://ring/Art-ring/Mossy Assets/Plant Animations/PlantJump2/JumpPlant 2_00002.png" id="3_d4ph6"]
@@ -106,7 +107,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 30.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -171,21 +172,38 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
-"speed": 30.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjpn"]
-size = Vector2(336, 192)
+size = Vector2(272, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tetft"]
+size = Vector2(272, 21)
 
 [node name="jumpad" type="CharacterBody2D"]
 collision_layer = 8192
 collision_mask = 0
+script = ExtResource("1_5rpqe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tioub")
 animation = &"jump"
 autoplay = "idle"
+frame = 19
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(0, -64)
 shape = SubResource("RectangleShape2D_bcjpn")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -66.5)
+shape = SubResource("RectangleShape2D_tetft")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_exited" from="Area2D" to="." method="_on_area_2d_area_shape_exited"]

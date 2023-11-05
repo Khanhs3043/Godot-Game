@@ -30,3 +30,7 @@ func double_jump():
 func _physics_process(delta):
 	if (!character.is_on_floor()) && (character.velocity.y > 0):
 		playback.travel(fall_anim)
+
+
+func _on_jumppad_body_entered(body):
+	has_double_jumped = true
