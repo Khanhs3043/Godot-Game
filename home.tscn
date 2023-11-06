@@ -1,47 +1,279 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1htij3xyp8hu"]
+[gd_scene load_steps=11 format=3 uid="uid://c1htij3xyp8hu"]
 
 [ext_resource type="Script" path="res://home.gd" id="1_rwu32"]
+[ext_resource type="Texture2D" uid="uid://bl7iq3opkulc4" path="res://home_png/bg.jpg" id="2_wrhqt"]
+[ext_resource type="Texture2D" uid="uid://bvoarbti6u222" path="res://home_png/diary.png" id="3_msyj4"]
+[ext_resource type="Texture2D" uid="uid://dfgrn1tywivw6" path="res://home_png/glow.png" id="3_p4cu4"]
+[ext_resource type="Texture2D" uid="uid://ckxxh6m6ch6je" path="res://home_png/completed.png" id="4_8ynwn"]
+[ext_resource type="Texture2D" uid="uid://c5x8qtpakiudq" path="res://home_png/locket.png" id="4_cemgr"]
+[ext_resource type="Texture2D" uid="uid://ki23fymn0tbj" path="res://home_png/ring.png" id="5_6vuc8"]
+[ext_resource type="Texture2D" uid="uid://ucimess710on" path="res://home_png/diadem.png" id="6_4duwj"]
+[ext_resource type="Texture2D" uid="uid://b5te807pgigcf" path="res://home_png/cup.png" id="7_dpp4j"]
+[ext_resource type="Texture2D" uid="uid://tw4wyjfc4bh7" path="res://home_png/gamename.png" id="10_cnqs0"]
 
-[node name="home" type="Node2D"]
+[node name="home" type="CanvasLayer"]
 script = ExtResource("1_rwu32")
 
-[node name="diary" type="Button" parent="."]
+[node name="bg" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_wrhqt")
+expand_mode = 1
+
+[node name="game_name" type="TextureRect" parent="bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.141
+anchor_right = 0.5
+anchor_bottom = 0.141
+offset_left = -265.0
+offset_top = -121.368
+offset_right = 1872.0
+offset_bottom = 968.632
+grow_horizontal = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_cnqs0")
+
+[node name="diary_glow" type="TextureRect" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 606.0
-offset_top = 115.0
-offset_right = 747.0
-offset_bottom = 252.0
+offset_left = -278.25
+offset_top = -169.25
+offset_right = 456.75
+offset_bottom = 1412.75
 grow_horizontal = 2
 grow_vertical = 2
-text = "Diary"
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p4cu4")
 
-[node name="medal" type="Button" parent="."]
-offset_left = 329.0
-offset_top = 338.0
-offset_right = 479.0
-offset_bottom = 473.0
-text = "Locket"
+[node name="cup_glow" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -458.0
+offset_top = -269.0
+offset_right = 277.0
+offset_bottom = 1313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p4cu4")
 
-[node name="ring" type="Button" parent="."]
-offset_left = 611.0
-offset_top = 336.0
-offset_right = 761.0
-offset_bottom = 471.0
-text = "Ring
-"
+[node name="diadem_glow" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -169.0
+offset_right = 835.0
+offset_bottom = 1413.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p4cu4")
 
-[node name="diadem" type="Button" parent="."]
-offset_left = 329.0
-offset_top = 117.0
-offset_right = 474.0
-offset_bottom = 252.0
-text = "Diadem"
+[node name="locket_glow" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -99.0
+offset_right = 644.0
+offset_bottom = 1483.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p4cu4")
 
+[node name="ring_glow" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 281.0
+offset_top = -265.0
+offset_right = 1016.0
+offset_bottom = 1317.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p4cu4")
+
+[node name="diary" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -145.0
+offset_right = 273.0
+offset_bottom = 1299.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_msyj4")
+
+[node name="completed" type="TextureRect" parent="diary"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 8.0
+offset_right = 231.5
+offset_bottom = 324.0
+grow_horizontal = 2
+texture = ExtResource("4_8ynwn")
+expand_mode = 2
+
+[node name="medal" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -76.0
+offset_right = 459.0
+offset_bottom = 1356.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("4_cemgr")
+
+[node name="completed" type="TextureRect" parent="medal"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 8.0
+offset_right = 231.5
+offset_bottom = 324.0
+grow_horizontal = 2
+texture = ExtResource("4_8ynwn")
+expand_mode = 2
+
+[node name="ring" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 307.0
+offset_top = -242.0
+offset_right = 832.0
+offset_bottom = 1190.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_6vuc8")
+
+[node name="completed" type="TextureRect" parent="ring"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 8.0
+offset_right = 231.5
+offset_bottom = 324.0
+grow_horizontal = 2
+texture = ExtResource("4_8ynwn")
+expand_mode = 2
+
+[node name="diadem" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 126.0
+offset_top = -143.0
+offset_right = 650.0
+offset_bottom = 1301.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_4duwj")
+
+[node name="completed" type="TextureRect" parent="diadem"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 8.0
+offset_right = 231.5
+offset_bottom = 324.0
+grow_horizontal = 2
+texture = ExtResource("4_8ynwn")
+expand_mode = 2
+
+[node name="cup" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -245.0
+offset_right = 93.0
+offset_bottom = 1201.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("7_dpp4j")
+
+[node name="completed" type="TextureRect" parent="cup"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 8.0
+offset_right = 231.5
+offset_bottom = 324.0
+grow_horizontal = 2
+texture = ExtResource("4_8ynwn")
+expand_mode = 2
+
+[connection signal="mouse_entered" from="bg/game_name" to="." method="_on_game_name_mouse_entered"]
+[connection signal="mouse_exited" from="bg/game_name" to="." method="_on_game_name_mouse_exited"]
+[connection signal="mouse_entered" from="diary" to="." method="_on_diary_mouse_entered"]
+[connection signal="mouse_exited" from="diary" to="." method="_on_diary_mouse_exited"]
 [connection signal="pressed" from="diary" to="." method="_on_diary_pressed"]
+[connection signal="mouse_entered" from="medal" to="." method="_on_medal_mouse_entered"]
+[connection signal="mouse_exited" from="medal" to="." method="_on_medal_mouse_exited"]
 [connection signal="pressed" from="medal" to="." method="_on_medal_pressed"]
+[connection signal="mouse_entered" from="ring" to="." method="_on_ring_mouse_entered"]
+[connection signal="mouse_exited" from="ring" to="." method="_on_ring_mouse_exited"]
 [connection signal="pressed" from="ring" to="." method="_on_ring_pressed"]
+[connection signal="mouse_entered" from="diadem" to="." method="_on_diadem_mouse_entered"]
+[connection signal="mouse_exited" from="diadem" to="." method="_on_diadem_mouse_exited"]
 [connection signal="pressed" from="diadem" to="." method="_on_diadem_pressed"]
+[connection signal="mouse_entered" from="cup" to="." method="_on_cup_mouse_entered"]
+[connection signal="mouse_exited" from="cup" to="." method="_on_cup_mouse_exited"]
+[connection signal="pressed" from="cup" to="." method="_on_cup_pressed"]

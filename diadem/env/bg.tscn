@@ -133,7 +133,8 @@ position = Vector2(779, 34)
 
 [node name="wall_lamp2" parent="." instance=ExtResource("26_i6juy")]
 position = Vector2(400, 36)
-scale = Vector2(-1, 1)
+rotation = -3.14159
+scale = Vector2(1, -1)
 
 [node name="poition_pot" parent="." instance=ExtResource("27_grrqs")]
 position = Vector2(184, 265)
@@ -158,6 +159,13 @@ position = Vector2(764, 434)
 [node name="ProphecyBall" parent="." instance=ExtResource("31_fr77b")]
 position = Vector2(629, 201)
 scale = Vector2(0.737179, 0.737179)
+
+[node name="Hint1" type="Sprite2D" parent="ProphecyBall"]
+modulate = Color(0.619608, 1, 0.356863, 0.623529)
+z_index = 2
+position = Vector2(-0.241394, -17.5507)
+scale = Vector2(0.105411, 0.105478)
+texture = ExtResource("50_ht8k6")
 
 [node name="passwords_frame" parent="." instance=ExtResource("31_q7455")]
 position = Vector2(1073, 292)
@@ -258,20 +266,13 @@ scale = Vector2(0.282503, 0.282503)
 texture = ExtResource("50_30g65")
 
 [node name="Hint2" type="Sprite2D" parent="hint"]
-position = Vector2(849, 66)
+position = Vector2(849, 90)
 rotation = 1.61094
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("49_5ajec")
 
-[node name="Hint1" type="Sprite2D" parent="hint"]
-modulate = Color(0.619608, 1, 0.356863, 0.623529)
-z_index = 2
-position = Vector2(628.822, 188.062)
-scale = Vector2(0.0777066, 0.077756)
-texture = ExtResource("50_ht8k6")
-
 [node name="mirror" parent="." instance=ExtResource("50_rjcib")]
-position = Vector2(887, 70)
+position = Vector2(887, 90)
 scale = Vector2(0.6, 0.6)
 
 [node name="pic1" parent="." instance=ExtResource("51_5mlex")]
@@ -349,5 +350,10 @@ scale = Vector2(0.586736, 0.586736)
 [node name="drawers_hcabinet4" parent="." instance=ExtResource("51_soaee")]
 position = Vector2(657, 307)
 scale = Vector2(0.586736, 0.586736)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+limit_left = 0
+limit_top = 0
 
 [connection signal="input_event" from="minihint" to="." method="_on_minihint_input_event"]

@@ -2,12 +2,15 @@ extends CanvasLayer
 var at_door = false
 signal wanna_exit 
 var exit = false
+var opendoor_png
 func _ready():
-	$exit.hide()
+	$door/exit.hide()
+	opendoor_png = preload("res://diadem/diadem-png/opendoor.png")
+	
 func open_door():
-	$AnimatedSprite2D.frame = 1
+	$door.texture = opendoor_png
 func show_exit():
-	$exit.show()
+	$door/exit.show()
 func _on_go_inside_pressed():
 	at_door = false
 	hide()

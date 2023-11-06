@@ -1,13 +1,10 @@
 extends Node2D
-
+var center_pos 
 var can_open = false
 var diadem_in_hand = false
 func _ready():
 	$dd.hide()
-	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if $dd.collected:
 		diadem_in_hand = true
