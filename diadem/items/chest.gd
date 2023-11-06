@@ -2,10 +2,12 @@ extends Node2D
 var center_pos 
 var can_open = false
 var diadem_in_hand = false
+
 func _ready():
 	$dd.hide()
 
 func _process(_delta):
+	center_pos = $"../ddpos".global_position
 	if $dd.collected:
 		diadem_in_hand = true
 	if can_open:

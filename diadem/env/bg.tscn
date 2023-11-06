@@ -356,4 +356,7 @@ position = Vector2(577, 323)
 limit_left = 0
 limit_top = 0
 
+[node name="ddpos" type="Marker2D" parent="."]
+position = Vector2(617, 323)
+
 [connection signal="input_event" from="minihint" to="." method="_on_minihint_input_event"]

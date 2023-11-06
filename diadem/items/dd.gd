@@ -1,5 +1,6 @@
 extends Area2D
 var collected = false
+
 func _ready():
 	$Ray.hide()
 func _process(_delta):
@@ -12,6 +13,6 @@ func _on_input_event(_viewport, event, _shape_idx):
 		
 func fly_out():
 	var tween = create_tween()
-	global_position = Vector2(620,323)
+	global_position = $"..".center_pos
 	tween.tween_property(self,"scale",Vector2(2,2),1)
 	$Ray.show()
