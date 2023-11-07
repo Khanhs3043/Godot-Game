@@ -57,7 +57,7 @@ func _process(_delta):
 	if supersight_poition.drank:
 		$hint.show()
 		$ProphecyBall/Hint1.show()
-	if $passwords_frame.is_hide and not $chest.can_open:
+	if $passwords_frame.is_hide:
 		$key.show()
 	if $chest.can_open:
 		$key.hide()

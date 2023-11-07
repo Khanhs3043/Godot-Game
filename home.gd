@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-
+var story_show = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$diary/completed.hide()
@@ -13,7 +13,11 @@ func _ready():
 	$cup_glow.modulate = Color(1,1,1,0)
 	$ring_glow.modulate = Color(1,1,1,0)
 	$locket_glow.modulate = Color(1,1,1,0)
-		
+	$frame.show()
+	var tween = create_tween()
+	$frame/story.visible_ratio = 0
+	tween.tween_property($frame/story,"visible_ratio",1,8)
+	
 func _process(_delta):
 	if Global.diadem:
 		$diadem/completed.show()
@@ -103,3 +107,15 @@ func _on_game_name_mouse_entered():
 func _on_game_name_mouse_exited():
 	var tween = create_tween()
 	tween.tween_property($bg/game_name,"modulate",Color(1,1,1),0.3)
+
+
+func _on_xbtn_pressed():
+	story_show = false
+	var tween = create_tween()
+	tween.tween_property($frame,"global_position:y",$frame_position.global_position.y + 1000,0.5)
+
+
+func _on_vol_btn_pressed():
+	if not story_show:
+		var tween = create_tween()
+		tween.tween_property($frame,"global_position:y",$frame_position.global_position.y,0.5)
