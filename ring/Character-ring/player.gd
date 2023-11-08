@@ -61,6 +61,7 @@ func update_facing_direction():
 #dieu kien qua man
 func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 		if leaf_collected && venom_colleted && solution_collected:
+			Global.ring = true 
 			get_tree().change_scene_to_file("res://ring/Levels-ring/win_scene.tscn")
 			#next level
 		else:
