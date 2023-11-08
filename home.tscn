@@ -1,5 +1,5 @@
+[gd_scene load_steps=23 format=3 uid="uid://lck0t6u8nfpy"]
 
-[gd_scene load_steps=23 format=3 uid="uid://c1htij3xyp8hu"]
 [ext_resource type="Script" path="res://home.gd" id="1_rwu32"]
 [ext_resource type="Texture2D" uid="uid://bl7iq3opkulc4" path="res://home_png/bg.jpg" id="2_wrhqt"]
 [ext_resource type="Texture2D" uid="uid://bvoarbti6u222" path="res://home_png/diary.png" id="3_msyj4"]
@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://didulb555wjih" path="res://home_png/ring0.png" id="22_nhs28"]
 [ext_resource type="Texture2D" uid="uid://dg8xlmbd8ud24" path="res://home_png/light.png" id="23_moibx"]
 [ext_resource type="Texture2D" uid="uid://bcsnm5706iajv" path="res://home_png/win_text.png" id="24_1jaaq"]
-
 
 [node name="home" type="CanvasLayer"]
 script = ExtResource("1_rwu32")
@@ -282,7 +281,7 @@ In order to exist forever, I tore my soul and stored it in Horcruxes. That's why
 I also realized that living forever is meaningless, I don't want to live like this anymore, I want to heal my soul.
 To do that, I have to find 4 Horcruxes I created, it may be a difficult journey, But... I have to do it, I want to go back to being Tom Riddle not Lord Voldemort anymore.
 
-5 Horcruxes include: Diary, Locket, Ring and Diadem "
+Horcruxes include: Diary, Locket, Ring and Diadem "
 autowrap_mode = 2
 text_overrun_behavior = 2
 
@@ -405,95 +404,6 @@ offset_right = 140.68
 offset_bottom = -9.59998
 grow_vertical = 0
 
-[node name="frame" type="TextureRect" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -584.0
-offset_top = -473.0
-offset_right = 3330.0
-offset_bottom = 2608.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("13_4gxwh")
-
-[node name="xbtn" type="TextureButton" parent="frame"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8
-anchor_top = 0.254
-anchor_right = 0.8
-anchor_bottom = 0.254
-offset_left = -64.866
-offset_top = -53.2405
-offset_right = 48.134
-offset_bottom = 59.7595
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("12_bo8wr")
-texture_pressed = ExtResource("13_ra174")
-stretch_mode = 0
-
-[node name="story" type="Label" parent="frame"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -861.0
-offset_top = -677.5
-offset_right = 916.0
-offset_bottom = 682.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("14_b0k5b")
-theme_override_font_sizes/font_size = 50
-text = "I'm Voldemort
-In order to exist forever, I tore my soul and stored it in Horcruxes. That's why now I no longer look like a human being. Everyone was terrified of me, seeing me as a cruel monster.
-I also realized that living forever is meaningless, I don't want to live like this anymore, I want to heal my soul.
-To do that, I have to find 5 Horcruxes I created, it may be a difficult journey, But... I have to do it, I want to go back to being Tom Riddle not Lord Voldemort anymore.
-
-5 Horcruxes include: Diary, Locket, Ring, Diadem and Cup"
-autowrap_mode = 2
-text_overrun_behavior = 2
-
-[node name="vol_btn" type="TextureButton" parent="."]
-anchors_preset = -1
-anchor_left = 0.949
-anchor_top = 0.927
-anchor_right = 0.961
-anchor_bottom = 0.927
-offset_left = -29.248
-offset_top = -47.696
-offset_right = 102.928
-offset_bottom = 100.304
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("11_0vubj")
-texture_pressed = ExtResource("12_hm8xr")
-texture_hover = ExtResource("14_kq0q1")
-
-[node name="frame_position" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -582.0
-offset_top = -472.0
-offset_right = 582.0
-offset_bottom = 446.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [connection signal="mouse_entered" from="bg/game_name" to="." method="_on_game_name_mouse_entered"]
 [connection signal="mouse_exited" from="bg/game_name" to="." method="_on_game_name_mouse_exited"]
 [connection signal="mouse_entered" from="diary" to="." method="_on_diary_mouse_entered"]
@@ -508,8 +418,5 @@ grow_vertical = 2
 [connection signal="mouse_entered" from="diadem" to="." method="_on_diadem_mouse_entered"]
 [connection signal="mouse_exited" from="diadem" to="." method="_on_diadem_mouse_exited"]
 [connection signal="pressed" from="diadem" to="." method="_on_diadem_pressed"]
-[connection signal="mouse_entered" from="cup" to="." method="_on_cup_mouse_entered"]
-[connection signal="mouse_exited" from="cup" to="." method="_on_cup_mouse_exited"]
-[connection signal="pressed" from="cup" to="." method="_on_cup_pressed"]
 [connection signal="pressed" from="frame/xbtn" to="." method="_on_xbtn_pressed"]
 [connection signal="pressed" from="vol_btn" to="." method="_on_vol_btn_pressed"]

@@ -53827,7 +53827,7 @@ layer_4/tile_data = PackedInt32Array(1703805, 393217, 33, 1376126, 458753, 28, 1
 
 [node name="deathzone" type="Area2D" parent="."]
 position = Vector2(-1273, 596)
-collision_layer = 16
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("9_cqige")
 

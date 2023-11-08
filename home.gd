@@ -2,7 +2,8 @@ extends CanvasLayer
 var center
 var story_show = true
 var horcruxes
-
+var time = 0
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = false
 	center = get_viewport().size/2
@@ -14,7 +15,7 @@ func _ready():
 		var tween = create_tween()
 		$frame/story.visible_ratio = 0
 		tween.tween_property($frame/story,"visible_ratio",1,8)
-	if Global.told:	
+	if Global.told:
 		story_show = false
 		$frame.global_position.y= $frame_position.global_position.y + 1000
 	$diary_glow.modulate = Color(1,1,1,0)
@@ -29,7 +30,6 @@ func _ready():
 	var tween = create_tween()
 	$frame/story.visible_ratio = 0
 	tween.tween_property($frame/story,"visible_ratio",1,8)
-	
 func _process(_delta):
 	if Global.diadem:
 		$diadem/completed.show()
