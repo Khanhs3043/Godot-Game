@@ -7,8 +7,6 @@ var listpos = []
 var win = false
 var lose = false
 func _ready():
-	var text = "\"The locket is somewhere at the bottom of the lake, and I have to find it. It's going to be quite dangerous\"\n\nGameplay: Use the ADWS keys to move left, right, up, and down, use SPACE to jump on the ground. The skeletons under the lake will chase you and deplete your energy, and when underwater, your breath will gradually decrease. Absorb green bubble to restore 10 energy and absorb blue bubble to restore 10 breath. Left-click to shoot enemies. (Note: You are holding the locket in your hand, but when touched by the skeletons, the locket will drop)\n\nGoal: Take the Locket out"
-	$main_ui.set_text(text,3)
 	bubblepos = $bubbleborn.get_children()
 	create_bubble()
 func create_bubble():

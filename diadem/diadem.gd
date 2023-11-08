@@ -2,8 +2,7 @@ extends Node2D
 var light = false
 
 func _ready():
-	var text = "\"This is a \"Request Room\", typically a \"Request Room\" can be used according to the user's desires, but somehow now it requires the user to search for clues and solve puzzles to find what they want.\"\n\nGameplay: Interact with objects by clicking the mouse to discover clues for solving puzzles. \n\nGoal: Retrieve the Diadem and take it outside."
-	$main_ui.set_text(text,3)
+	
 	$exit_door.hide()
 
 func _process(_delta):
