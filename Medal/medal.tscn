@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqkqccwmhws6q"]
+[gd_scene load_steps=10 format=3 uid="uid://dqkqccwmhws6q"]
 
 [ext_resource type="Script" path="res://Medal/medal.gd" id="1_cgvqf"]
 [ext_resource type="PackedScene" uid="uid://dnjom8hn1p2ce" path="res://Medal/player/player.tscn" id="1_skv2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b20rb1ntoj70x" path="res://Medal/env/map.tscn" id="4_oge8w"]
 [ext_resource type="PackedScene" uid="uid://cd4pcum8oyw0w" path="res://Medal/item/locket.tscn" id="5_maoyv"]
 [ext_resource type="PackedScene" uid="uid://3vee3spjb7hf" path="res://Medal/ui/ui.tscn" id="6_v2m22"]
+[ext_resource type="PackedScene" uid="uid://bwn04y1ej05ix" path="res://ui/main_ui.tscn" id="7_4wmtw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b1gq"]
 size = Vector2(2173.5, 291)
@@ -198,6 +199,8 @@ position = Vector2(475, 840)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 position = Vector2(1471.5, -190.5)
 shape = SubResource("RectangleShape2D_rjhsq")
+
+[node name="main_ui" parent="." instance=ExtResource("7_4wmtw")]
 
 [connection signal="area_entered" from="air" to="." method="_on_air_area_entered"]
 [connection signal="body_entered" from="air" to="." method="_on_air_body_entered"]
