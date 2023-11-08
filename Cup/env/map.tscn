@@ -1,10 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://b20rb1ntoj70x"]
+[gd_scene load_steps=9 format=3 uid="uid://b20rb1ntoj70x"]
 
 [ext_resource type="Texture2D" uid="uid://cfx8b0mrdeeq3" path="res://Cup/png/map/03/Spritesheet/Map_of_a_gold_vault_of_the_witch's_bank_2d_image_used_to_make_games.png" id="1_ba5sl"]
 [ext_resource type="Texture2D" uid="uid://ctgxgcpsgmuro" path="res://Cup/png/map/03/Spritesheet/roguelikeDungeon_transparent.png" id="2_a7xa3"]
-[ext_resource type="Texture2D" uid="uid://blfsu4lc4gwit" path="res://Cup/png/map/01/Tilesheet/platformPack_tilesheet.png" id="3_8q4df"]
-[ext_resource type="Texture2D" uid="uid://drpwsjmifllh7" path="res://Cup/png/map/01/PNG/Items/platformPack_item008.png" id="4_3xjny"]
-[ext_resource type="Texture2D" uid="uid://dvnwwe7gsp24" path="res://Cup/png/map/01/PNG/Items/platformPack_item014.png" id="5_jjgsp"]
 [ext_resource type="Texture2D" uid="uid://dyvddhgqmygaw" path="res://Cup/png/Cup.png" id="6_4kyr3"]
 [ext_resource type="Texture2D" uid="uid://dcrbpcnhlemrw" path="res://Cup/png/gold.png" id="7_wkc54"]
 
@@ -4679,7 +4676,6 @@ texture = ExtResource("2_a7xa3")
 29:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdctx"]
-texture = ExtResource("3_8q4df")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -5682,15 +5678,12 @@ metadata/_edit_group_ = true
 
 [node name="PlatformPackItem009" type="Sprite2D" parent="Daquy01"]
 position = Vector2(-376, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem010" type="Sprite2D" parent="Daquy01"]
 position = Vector2(-392, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem008" type="Sprite2D" parent="Daquy01"]
 position = Vector2(-384, -536)
-texture = ExtResource("4_3xjny")
 
 [node name="Daquy02" type="Node2D" parent="."]
 position = Vector2(2272, 24)
@@ -5698,15 +5691,12 @@ metadata/_edit_group_ = true
 
 [node name="PlatformPackItem009" type="Sprite2D" parent="Daquy02"]
 position = Vector2(-376, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem010" type="Sprite2D" parent="Daquy02"]
 position = Vector2(-392, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem008" type="Sprite2D" parent="Daquy02"]
 position = Vector2(-384, -536)
-texture = ExtResource("4_3xjny")
 
 [node name="Daquy03" type="Node2D" parent="."]
 position = Vector2(1164, 480)
@@ -5714,15 +5704,12 @@ metadata/_edit_group_ = true
 
 [node name="PlatformPackItem009" type="Sprite2D" parent="Daquy03"]
 position = Vector2(-376, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem010" type="Sprite2D" parent="Daquy03"]
 position = Vector2(-392, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem008" type="Sprite2D" parent="Daquy03"]
 position = Vector2(-384, -536)
-texture = ExtResource("4_3xjny")
 
 [node name="Daquy04" type="Node2D" parent="."]
 position = Vector2(796, 911)
@@ -5730,15 +5717,12 @@ metadata/_edit_group_ = true
 
 [node name="PlatformPackItem009" type="Sprite2D" parent="Daquy04"]
 position = Vector2(-376, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem010" type="Sprite2D" parent="Daquy04"]
 position = Vector2(-392, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem008" type="Sprite2D" parent="Daquy04"]
 position = Vector2(-384, -536)
-texture = ExtResource("4_3xjny")
 
 [node name="Daquy05" type="Node2D" parent="."]
 position = Vector2(1517, 934)
@@ -5746,27 +5730,22 @@ metadata/_edit_group_ = true
 
 [node name="PlatformPackItem009" type="Sprite2D" parent="Daquy05"]
 position = Vector2(-376, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem010" type="Sprite2D" parent="Daquy05"]
 position = Vector2(-392, -528)
-texture = ExtResource("4_3xjny")
 
 [node name="PlatformPackItem008" type="Sprite2D" parent="Daquy05"]
 position = Vector2(-384, -536)
-texture = ExtResource("4_3xjny")
 
 [node name="Key01" type="Node2D" parent="."]
 
 [node name="PlatformPackItem014" type="Sprite2D" parent="Key01"]
 position = Vector2(1552, 248)
-texture = ExtResource("5_jjgsp")
 
 [node name="Key02" type="Node2D" parent="."]
 
 [node name="PlatformPackItem014" type="Sprite2D" parent="Key02"]
 position = Vector2(-408, 616)
-texture = ExtResource("5_jjgsp")
 
 [node name="Cup01" type="Node2D" parent="."]
 metadata/_edit_group_ = true
