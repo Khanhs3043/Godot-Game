@@ -1,14 +1,8 @@
 extends CanvasLayer
-<<<<<<< HEAD
 var center
 var story_show = true
 var horcruxes
-var time = 0
-=======
 
-var story_show = true
-# Called when the node enters the scene tree for the first time.
->>>>>>> 148de90d0e1d54ff0369985f20b25332741f06e5
 func _ready():
 	get_tree().paused = false
 	center = get_viewport().size/2
@@ -27,19 +21,16 @@ func _ready():
 	$diadem_glow.modulate = Color(1,1,1,0)
 	$ring_glow.modulate = Color(1,1,1,0)
 	$locket_glow.modulate = Color(1,1,1,0)
-<<<<<<< HEAD
 	$horcruxes.modulate = Color(1,1,1,0)
 	if Global.ring and Global.diadem and Global.diary and Global.locket and not Global.show_win:
 		win()
 		Global.show_win = true
-=======
 	$frame.show()
 	var tween = create_tween()
 	$frame/story.visible_ratio = 0
 	tween.tween_property($frame/story,"visible_ratio",1,8)
 	
 func _process(_delta):
->>>>>>> 148de90d0e1d54ff0369985f20b25332741f06e5
 	if Global.diadem:
 		$diadem/completed.show()
 	if Global.diary:
@@ -141,10 +132,7 @@ func _on_game_name_mouse_exited():
 
 func _on_xbtn_pressed():
 	story_show = false
-<<<<<<< HEAD
 	Global.told = true
-=======
->>>>>>> 148de90d0e1d54ff0369985f20b25332741f06e5
 	var tween = create_tween()
 	tween.tween_property($frame,"global_position:y",$frame_position.global_position.y + 1000,0.5)
 
