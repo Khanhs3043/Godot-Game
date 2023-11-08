@@ -474,7 +474,6 @@ scale = Vector2(0.97, 0.97)
 collision_layer = 2
 collision_mask = 1793
 script = ExtResource("1_ppel8")
-speed = 1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8.24742)
@@ -564,7 +563,6 @@ collision_mask = 8192
 position = Vector2(0, 145.361)
 shape = SubResource("RectangleShape2D_kbjpq")
 
-[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/attack" method="_on_animation_tree_animation_finished"]
 [connection signal="area_shape_entered" from="ring detection" to="." method="_on_area_2d_area_shape_entered"]

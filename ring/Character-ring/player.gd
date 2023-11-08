@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 @export var jumppad = -3000
-@export var speed : float = 200.0
+@export var speed : float = 1000
 @export var knockback_up = -1000
 @export var knockback = 2500
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
@@ -43,7 +43,6 @@ func _physics_process(delta):
 func get_hit():
 	self.velocity.x = knockback_direction.x * knockback
 	self.velocity.y = knockback_up
-	move_and_slide()
 
 #cap nhat trang thai quya trai phai
 func update_animation():
@@ -59,8 +58,9 @@ func update_facing_direction():
 		emit_signal("facing_direction_changed", !animated_sprite.flip_h)
 
 #dieu kien qua man
-func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+func _on_area_2d_area_shape_entered():
 		if leaf_collected && venom_colleted && solution_collected:
+			Global.ring = true
 			get_tree().change_scene_to_file("res://ring/Levels-ring/win_scene.tscn")
 			#next level
 		else:
@@ -86,7 +86,7 @@ func _on_portaldetection_area_entered(area):
 		position.x = 4800
 		position.y = -3100
 
-func _on_hitbox_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_hitbox_body_shape_entered():
 	Global.player_health -= 1
 	being_hit = true
 	timer.start()
@@ -94,5 +94,5 @@ func _on_hitbox_body_shape_entered(body_rid, body, body_shape_index, local_shape
 func _on_timer_timeout():
 	being_hit = false
 
-func _on_jumppad_body_entered(body):
+func _on_jumppad_body_entered():
 	velocity.y = jumppad 
