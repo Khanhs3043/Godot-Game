@@ -8,6 +8,8 @@ var bubbleamount = 0
 var have_diary = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var text = "\"The diary is hidden somewhere in Hogwarts, and I have to go find it. However, it's not a good idea for others to see me because they are all very frightened when they see me.\"\n\nGameplay: Use the A D W S keys to move left, right, up, and down. Collect invisible bubbles scattered around the map and press SHIFT to activate the invisibility skill for 10 seconds (when you have bubbles). The diary is hidden in one of the chests; approach it and click the mouse to open it. You can use the doors to instantly move through the corresponding door.\n\nGoal: Find and retrieve the diary without being detected"
+	$main_ui.set_text(text,3)
 	diary = preload("res://Diary/item/tdiary.tscn").instantiate()
 	positions = $invispos.get_children()
 	var listPosition = []
