@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dmmkegp00cl18"]
+[gd_scene load_steps=85 format=3 uid="uid://dmmkegp00cl18"]
 
 [ext_resource type="Texture2D" uid="uid://dq8dmuvg365cc" path="res://ring/Art-ring/Mossy Tilesetsdfsd/Mossy - Decorations&Hazards.png" id="1_eq2oy"]
 [ext_resource type="Script" path="res://ring/Levels-ring/test_level.gd" id="1_flfab"]
@@ -23,7 +23,6 @@
 [ext_resource type="Script" path="res://ring/Levels-ring/UI.gd" id="19_vouia"]
 [ext_resource type="Texture2D" uid="uid://26mqae35ev1t" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/Mossy Tilesetsdfsd/Mossy - BackgroundDecoration.png" id="19_wb7ig"]
 [ext_resource type="Texture2D" uid="uid://c4pxionagexwl" path="res://ring/Art-ring/UI/basic/heart.png" id="20_i6tip"]
-[ext_resource type="FontFile" uid="uid://bklvhtrmsdsp2" path="res://ring/Art-ring/font/Forever Dreaming.otf" id="21_w8np0"]
 [ext_resource type="Script" path="res://ring/Levels-ring/healthcounter.gd" id="22_axm1b"]
 [ext_resource type="Texture2D" uid="uid://dncaqlawlqjtq" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/vecteezy_poison-in-a-bottle-vector_12213922.png" id="24_df10j"]
 [ext_resource type="Texture2D" uid="uid://v5ipkw2acimu" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/pngegg.png" id="25_1uhb1"]
@@ -31,6 +30,15 @@
 [ext_resource type="Texture2D" uid="uid://en5x6kv5ipq3" path="res://ring/Art-ring/Mossy Assets/Plant Animations/BlueFlower1/BlueFlower_00000.png" id="26_groy6"]
 [ext_resource type="Script" path="res://ring/Levels-ring/solution.gd" id="27_mikgi"]
 [ext_resource type="Script" path="res://ring/Levels-ring/flower.gd" id="29_xqmie"]
+[ext_resource type="FontFile" uid="uid://r2f1jiniy7mi" path="res://font/ArchitectsDaughter.ttf" id="30_nwq3n"]
+[ext_resource type="Script" path="res://ui/main_ui.gd" id="32_bv2hq"]
+[ext_resource type="Texture2D" uid="uid://dqo1icdy71sym" path="res://ui/frame.png" id="33_jc6wm"]
+[ext_resource type="Texture2D" uid="uid://bnbu5pdnd2y13" path="res://home_png/xbtn.png" id="34_bly18"]
+[ext_resource type="Texture2D" uid="uid://ngdnv83gpptb" path="res://home_png/xbtn_pressed.png" id="35_v5mtw"]
+[ext_resource type="Texture2D" uid="uid://cmvwxptanu45s" path="res://ui/home_btn.png" id="36_a6i7g"]
+[ext_resource type="Texture2D" uid="uid://be20i76be5fmf" path="res://ui/home_btn_pressed.png" id="37_4a0ca"]
+[ext_resource type="Texture2D" uid="uid://6erpyxcx65sh" path="res://ui/guide_btn.png" id="38_bti0f"]
+[ext_resource type="Texture2D" uid="uid://be14qkwqtoq5p" path="res://ui/guide_btn_pressed.png" id="39_dlnop"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_02vo1"]
 tile_data = PackedInt32Array(458752, 65536, 8, 524288, 65536, 9, 851968, 65536, 14, 262145, 131072, 5, 327681, 131072, 6, 393217, 131072, 7, 458753, 131072, 8, 524289, 131072, 9, 589825, 131072, 10, 655361, 131072, 11, 720897, 131072, 12, 786433, 131072, 13, 851969, 131072, 14, 917505, 131072, 15, 983041, 131072, 16, 262146, 196608, 5, 327682, 196608, 6, 393218, 196608, 7, 458754, 196608, 8, 524290, 196608, 9, 589826, 196608, 10, 655362, 196608, 11, 720898, 196608, 12, 786434, 196608, 13, 851970, 196608, 14, 917506, 196608, 15, 983042, 196608, 16, 1048578, 196608, 17, 1114114, 196608, 18, 3, 262144, 1, 65539, 262144, 2, 131075, 262144, 3, 196611, 262144, 4, 262147, 262144, 5, 327683, 262144, 6, 393219, 262144, 7, 458755, 262144, 8, 524291, 262144, 9, 589827, 262144, 10, 655363, 262144, 11, 720899, 262144, 12, 786435, 262144, 13, 851971, 262144, 14, 917507, 262144, 15, 983043, 262144, 16, 1048579, 262144, 17, 1114115, 262144, 18, 1179651, 262144, 19, 1245187, 262144, 20, 196612, 327680, 4, 262148, 327680, 5, 327684, 327680, 6, 393220, 327680, 7, 458756, 327680, 8, 524292, 327680, 9, 589828, 327680, 10, 655364, 327680, 11, 720900, 327680, 12, 786436, 327680, 13, 851972, 327680, 14, 917508, 327680, 15, 983044, 327680, 16, 1048580, 327680, 17, 1114116, 327680, 18, 1179652, 327680, 19, 262149, 393216, 5, 327685, 393216, 6, 393221, 393216, 7, 458757, 393216, 8, 524293, 393216, 9, 589829, 393216, 10, 655365, 393216, 11, 720901, 393216, 12, 786437, 393216, 13, 851973, 393216, 14, 917509, 393216, 15, 983045, 393216, 16, 327686, 458752, 6, 393222, 458752, 7, 458758, 458752, 8, 524294, 458752, 9, 720902, 458752, 12, 786438, 458752, 13, 851974, 458752, 14)
@@ -53689,6 +53697,15 @@ size = Vector2(638.5, 185)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rykvd"]
 size = Vector2(4137.5, 445.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fltk"]
+size = Vector2(373, 303.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsd3p"]
+size = Vector2(310, 274)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3qla"]
+size = Vector2(237.5, 275.5)
+
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_flfab")
 metadata/_edit_horizontal_guides_ = [29697.0, 33061.0, 124.0, -3096.0, -1889.0]
@@ -53776,7 +53793,10 @@ position = Vector2(7728, -1600)
 position = Vector2(1808, -1120)
 floor_stop_on_slope = false
 floor_max_angle = 0.872665
+jumppad = -3000
 speed = 800.0
+knockback_up = -1000
+knockback = 2500
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2(0.00025177, -0.000244141)
@@ -53890,77 +53910,174 @@ texture = ExtResource("20_i6tip")
 
 [node name="venom" type="TextureRect" parent="UI"]
 visible = false
-offset_left = 952.0
-offset_top = 24.0
-offset_right = 1008.0
-offset_bottom = 80.0
+offset_left = 1088.0
+offset_top = 576.0
+offset_right = 1144.0
+offset_bottom = 632.0
 texture = ExtResource("24_df10j")
 expand_mode = 1
 script = ExtResource("25_om5w0")
 
 [node name="solution" type="TextureRect" parent="UI"]
 visible = false
-offset_left = 1008.0
-offset_top = 24.0
-offset_right = 1064.0
-offset_bottom = 80.0
+offset_left = 1024.0
+offset_top = 576.0
+offset_right = 1080.0
+offset_bottom = 632.0
 texture = ExtResource("25_1uhb1")
 expand_mode = 1
 script = ExtResource("27_mikgi")
 
 [node name="flower" type="TextureRect" parent="UI"]
 visible = false
-offset_left = 1064.0
-offset_top = 24.0
-offset_right = 1120.0
-offset_bottom = 80.0
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1016.0
+offset_bottom = 632.0
 texture = ExtResource("26_groy6")
 expand_mode = 1
 script = ExtResource("29_xqmie")
 
 [node name="healthcounter" type="Label" parent="UI"]
-offset_left = 96.0
-offset_top = 8.0
-offset_right = 184.0
-offset_bottom = 112.0
+offset_left = 105.0
+offset_top = -9.0
+offset_right = 195.0
+offset_bottom = 114.0
 theme_override_colors/font_color = Color(0.476563, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("21_w8np0")
-theme_override_font_sizes/font_size = 71
+theme_override_fonts/font = ExtResource("30_nwq3n")
+theme_override_font_sizes/font_size = 69
 text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("22_axm1b")
 
-[node name="quit" type="Button" parent="UI"]
-offset_left = 1008.0
-offset_top = 600.0
-offset_right = 1138.0
-offset_bottom = 638.0
-theme_override_fonts/font = ExtResource("21_w8np0")
-theme_override_font_sizes/font_size = 29
-text = "main menu"
+[node name="main_ui" type="CanvasLayer" parent="."]
+script = ExtResource("32_bv2hq")
 
-[node name="Label" type="Label" parent="UI"]
-offset_left = 16.0
-offset_top = 520.0
-offset_right = 216.0
-offset_bottom = 624.0
-text = "D - move right
-A - move left
-SPACE - jump
-LEFT CLICK - fire ball"
-vertical_alignment = 1
+[node name="frame" type="TextureRect" parent="main_ui"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -388.0
+offset_right = 3423.0
+offset_bottom = 2693.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("33_jc6wm")
 
+[node name="text" type="Label" parent="main_ui/frame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1024.5
+offset_top = -712.5
+offset_right = 1031.5
+offset_bottom = 719.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("30_nwq3n")
+theme_override_font_sizes/font_size = 60
+autowrap_mode = 2
+
+[node name="x" type="TextureButton" parent="main_ui/frame"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.803
+anchor_top = 0.253
+anchor_right = 0.803
+anchor_bottom = 0.253
+offset_left = -62.1392
+offset_top = -39.493
+offset_right = 29.8608
+offset_bottom = 52.507
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("34_bly18")
+texture_pressed = ExtResource("35_v5mtw")
+stretch_mode = 0
+
+[node name="home" type="TextureButton" parent="main_ui"]
+anchors_preset = -1
+anchor_left = 0.979
+anchor_top = 0.03
+anchor_right = 0.979
+anchor_bottom = 0.03
+offset_left = -41.808
+offset_top = 6.56
+offset_right = 128.192
+offset_bottom = 198.56
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("36_a6i7g")
+texture_pressed = ExtResource("37_4a0ca")
+
+[node name="guide" type="TextureButton" parent="main_ui"]
+anchors_preset = -1
+anchor_left = 0.979
+anchor_top = 0.042
+anchor_right = 0.979
+anchor_bottom = 0.042
+offset_left = -48.808
+offset_top = 49.784
+offset_right = 161.192
+offset_bottom = 320.784
+grow_horizontal = 0
+scale = Vector2(0.23, 0.23)
+texture_normal = ExtResource("38_bti0f")
+texture_pressed = ExtResource("39_dlnop")
+
+[node name="boardialogue" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boardialogue"]
+position = Vector2(4880, -2936.25)
+shape = SubResource("RectangleShape2D_5fltk")
+
+[node name="flowerdialogue" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flowerdialogue"]
+position = Vector2(-5624, -1048)
+shape = SubResource("RectangleShape2D_bsd3p")
+
+[node name="venomdiag" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="venomdiag"]
+position = Vector2(-8552, -2408)
+shape = SubResource("RectangleShape2D_e3qla")
+
+[connection signal="tree_exited" from="leaf" to="." method="_on_leaf_tree_exited"]
 [connection signal="tree_exited" from="leaf" to="Player" method="_on_leaf_tree_exited"]
 [connection signal="tree_exited" from="leaf" to="UI/flower" method="_on_leaf_tree_exited"]
+[connection signal="tree_exited" from="venom" to="." method="_on_venom_tree_exited"]
 [connection signal="tree_exited" from="venom" to="Player" method="_on_venom_tree_exited"]
 [connection signal="tree_exited" from="venom" to="UI/venom" method="_on_venom_tree_exited"]
 [connection signal="body_entered" from="solution" to="solution" method="_on_body_entered"]
 [connection signal="body_exited" from="solution" to="solution" method="_on_body_exited"]
+[connection signal="tree_exited" from="solution" to="." method="_on_solution_tree_exited"]
 [connection signal="tree_exited" from="solution" to="Player" method="_on_solution_tree_exited"]
 [connection signal="tree_exited" from="solution" to="UI/solution" method="_on_solution_tree_exited"]
 [connection signal="tree_exited" from="mob" to="teleporter2" method="_on_mob_tree_exited"]
 [connection signal="body_entered" from="deathzone" to="deathzone" method="_on_body_entered"]
-[connection signal="pressed" from="UI/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="main_ui/frame/x" to="main_ui" method="_on_x_pressed" flags=18]
+[connection signal="pressed" from="main_ui/home" to="main_ui" method="_on_home_pressed" flags=18]
+[connection signal="pressed" from="main_ui/guide" to="main_ui" method="_on_guide_pressed" flags=18]
+[connection signal="body_entered" from="boardialogue" to="." method="_on_boardialogue_body_entered"]
+[connection signal="body_entered" from="flowerdialogue" to="." method="_on_flowerdialogue_body_entered"]
+[connection signal="body_entered" from="venomdiag" to="." method="_on_area_2d_3_body_entered"]

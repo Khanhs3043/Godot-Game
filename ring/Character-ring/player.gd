@@ -13,7 +13,7 @@ var being_hit : bool = false
 var knockback_direction
 var enemy 
 var solution_collected : bool = false
-var venom_colleted : bool = false
+var venom_collected : bool = false
 var leaf_collected : bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2 = Vector2.ZERO
@@ -60,7 +60,7 @@ func update_facing_direction():
 
 #dieu kien qua man
 func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-		if leaf_collected && venom_colleted && solution_collected:
+		if leaf_collected && venom_collected && solution_collected:
 			Global.ring = true 
 			get_tree().change_scene_to_file("res://ring/Levels-ring/win_scene.tscn")
 			#next level
@@ -72,7 +72,7 @@ func _on_leaf_tree_exited():
 	leaf_collected = true
 #nhat duoc lo doc
 func _on_venom_tree_exited():
-	venom_colleted = true
+	venom_collected = true
 #nhat duoc dung dich
 func _on_solution_tree_exited():
 	solution_collected = true
@@ -97,3 +97,4 @@ func _on_timer_timeout():
 
 func _on_jumppad_body_entered(body):
 	velocity.y = jumppad 
+
