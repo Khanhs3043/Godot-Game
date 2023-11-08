@@ -1,4 +1,9 @@
 extends Node2D
+
+var solution_collected : bool = true
+var venom_collected : bool = true
+var leaf_collected : bool = true
+
 func _ready():
 	var text = "\n'Here i am in the Mystical Forrest. The Ring is right here but the Myths said it is cursed.\nCan't risk touching it! there's gotta be a way to lift the curse' \nPress: AD to move left and right, SPACE to jump, leftclick to cast fireball\n\n Objective: Lift the curse and take the ring"
 	$main_ui.set_text(text,3)
@@ -23,3 +28,9 @@ func _on_area_2d_3_body_entered(body):
 	$venomdiag.queue_free()
 
 
+func _on_win_body_entered(body):
+	if solution_collected && venom_collected && leaf_collected :
+		var text = " Ok, i have collected all ingredients to lift the curse.\nHere goes nothing! "
+		$main_ui.set_text(text,2)
+		$main_ui/frame.show()
+		$win.queue_free()
