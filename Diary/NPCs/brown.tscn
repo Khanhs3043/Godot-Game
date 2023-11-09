@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cdi2x4h0xdo5b"]
+[gd_scene load_steps=23 format=3 uid="uid://cdi2x4h0xdo5b"]
 
 [ext_resource type="Texture2D" uid="uid://q3sl3glsdbsg" path="res://Diary/png/48x48/Character_007.png" id="1_sr1jw"]
 [ext_resource type="Script" path="res://Diary/NPCs/brown.gd" id="1_vb6k1"]
+[ext_resource type="Texture2D" uid="uid://bff8meanp814t" path="res://Diary/png/red_circle.png" id="3_av4r7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xjr54"]
 radius = 38.0
@@ -193,5 +194,12 @@ target_position = Vector2(112, 456)
 
 [node name="RayCast2D9" type="RayCast2D" parent="sight"]
 target_position = Vector2(139, 437)
+
+[node name="RedCircle" type="Sprite2D" parent="."]
+visible = false
+z_index = 5
+position = Vector2(1, 5)
+scale = Vector2(0.177861, 0.177861)
+texture = ExtResource("3_av4r7")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

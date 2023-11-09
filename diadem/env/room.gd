@@ -33,10 +33,8 @@ func _process(_delta):
 	if Input.is_action_just_pressed("z") and is_zoom:
 		mousepos = get_global_mouse_position()
 		var tween = create_tween()
-		#$Camera2D.global_position = campos
 		tween.tween_property($Camera2D,"zoom",Vector2(1,1),0.3)
 		tween.tween_property($Camera2D,"position",campos,0.3)
-		
 		is_zoom = false
 	elif Input.is_action_just_pressed("z") and not is_zoom:
 		mousepos = get_global_mouse_position()
@@ -51,8 +49,10 @@ func _process(_delta):
 	if $chest.diadem_in_hand and go_out:
 		win = true
 	if not $chest.diadem_in_hand and go_out:
+		$"../losewin".reason = "You went out without Diadem"
 		lose = true
 	if drank_list.has("red") and drank_list.has("green") and drank_list.has("blue"):
+		$"../losewin".reason = "You die of poison"
 		lose = true
 	if supersight_poition.drank:
 		$hint.show()

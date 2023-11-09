@@ -421,7 +421,7 @@ z_index = 4
 position = Vector2(405, -98)
 
 [node name="smallbox6" parent="container" instance=ExtResource("8_jtwdr")]
-position = Vector2(528, 438)
+position = Vector2(520, 422)
 
 [node name="smallbox14" parent="container" instance=ExtResource("8_jtwdr")]
 position = Vector2(748, 427)

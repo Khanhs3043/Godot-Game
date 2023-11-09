@@ -1,18 +1,16 @@
 extends CanvasLayer
+var reason
 
 func display_win():
 	$win.show()
 	get_tree().paused = true
 func display_lose():
+	$lose/reason.text = reason
 	$lose.show()
 	get_tree().paused = true
 func _ready():
 	$win.hide()
 	$lose.hide()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
 
 
 func _on_play_again_pressed():

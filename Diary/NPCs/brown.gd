@@ -46,6 +46,7 @@ func _process(delta):
 			if not player.is_invisible:
 				player.moveto(global_position)
 				$"../../ui".reason = "This person has seen you"
+				$RedCircle.show()
 				set_process(false)
 				await get_tree().create_timer(0.5).timeout
 				$"../../ui".display_lose()

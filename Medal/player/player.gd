@@ -11,8 +11,12 @@ var locket_in_hand = false
 var dead = false
 
 func _process(delta):
-	if breath <=0 or energy <=0 :
+	if breath <=0:
 		dead = true
+		$"../ui".reason = "You run out of breath"
+	if energy <=0 :
+		dead = true
+		$"../ui".reason = "You run out of energy"
 	hand = $hand.global_position
 	if breath > 100:
 		breath = 100

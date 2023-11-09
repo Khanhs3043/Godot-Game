@@ -72,3 +72,4 @@ func _on_exit_body_entered(body):
 		Global.locket = true
 	if body.name == "player" and not body.locket_in_hand:
 		lose = true
+		$ui.reason = "You went out without Locket"

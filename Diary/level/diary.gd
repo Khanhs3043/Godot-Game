@@ -70,7 +70,7 @@ func _on_exit_body_entered(body):
 		print("Win!")
 		$ui.display_win()
 		Global.diary =  true
-	else: 
+	elif body.name == "player" and not Global.have_diary: 
 		print("Lose!")
-		$ui.reason = "You went out without the D iary"
+		$ui.reason = "You went out without the Diary"
 		$ui.display_lose()

@@ -1,18 +1,12 @@
 extends CanvasLayer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var reason
 func _process(_delta):
 	$VBoxContainer/energy.value = $"../player".energy
 	$VBoxContainer/breath.value = $"../player".breath
 	
 func display_lose():
 	get_tree().paused = true
+	$Lose/reason.text = reason
 	$Lose.show()
 func display_win():
 	get_tree().paused = true
