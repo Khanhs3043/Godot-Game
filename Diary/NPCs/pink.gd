@@ -41,8 +41,12 @@ func _process(delta):
 	for i in sight:
 		if i.is_colliding() and i.get_collider() == player:
 			if not player.is_invisible:
+				player.moveto(global_position)
+				$"../../ui".reason = "This person has seen you"
+				set_process(false)
+				await get_tree().create_timer(0.5).timeout
 				$"../../ui".display_lose()
-func _on_area_2d_body_entered(_ody):
+func _on_area_2d_body_entered(_body):
 	if currentDirection == "left":
 		currentDirection = "right"
 	elif currentDirection == "right":

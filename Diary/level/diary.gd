@@ -72,4 +72,5 @@ func _on_exit_body_entered(body):
 		Global.diary =  true
 	else: 
 		print("Lose!")
+		$ui.reason = "You went out without the D iary"
 		$ui.display_lose()

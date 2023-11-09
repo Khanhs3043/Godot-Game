@@ -69,7 +69,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Lose" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -121,6 +120,22 @@ text = "Try again!"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Quit"
+
+[node name="reason" type="Label" parent="Lose"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -1.325
+anchor_right = 0.5
+anchor_bottom = -1.325
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 248.0
+offset_bottom = 18.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="win" type="Control" parent="."]
 visible = false

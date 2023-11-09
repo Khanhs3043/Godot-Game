@@ -27,7 +27,10 @@ func _process(delta):
 		activate_invisibility()
 		$"..".bubbleamount -=1
 		$"../ui".update_bubbleAmount()
-
+func moveto(pos):
+	var tween = create_tween()
+	tween.tween_property($Camera2D,"global_position",pos,0.5)
+	tween.tween_property($Camera2D,"zoom",Vector2(4,4),0.5)
 func activate_invisibility():
 	if is_invisible:
 		$invisibletime.start()

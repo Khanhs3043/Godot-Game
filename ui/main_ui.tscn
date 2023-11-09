@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ngdnv83gpptb" path="res://home_png/xbtn_pressed.png" id="5_aaune"]
 
 [node name="main_ui" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_unn3c")
 
 [node name="frame" type="TextureRect" parent="."]

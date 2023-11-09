@@ -1,5 +1,6 @@
 extends CanvasLayer
 var timeleft
+var reason
 func _ready():
 	$Lose.hide()
 	$win.hide()
@@ -20,6 +21,7 @@ func _on_timer_timeout():
 		$countdown.text = ' '
 func display_lose():
 	get_tree().paused = true
+	$Lose/reason.text = reason
 	$Lose.show()
 func display_win():
 	get_tree().paused = true
