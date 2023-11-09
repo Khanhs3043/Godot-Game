@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://xxaoff7gwbrm"]
+[gd_scene load_steps=48 format=3 uid="uid://xxaoff7gwbrm"]
 
 [ext_resource type="Script" path="res://ring/Character-ring/player.gd" id="1_ppel8"]
 [ext_resource type="Texture2D" uid="uid://dognk3i7y6aga" path="res://ring/Art-ring/Mossy Assets/BlueWizard(player)/2BlueWizardWalk/Untitled-3.png" id="2_6uul2"]
@@ -378,9 +378,6 @@ _data = {
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gjtl3"]
 animation = &"atk1"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fkc32"]
-animation = &"dash"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_077sq"]
 animation = &"db_jump"
 
@@ -432,16 +429,10 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wsn8s"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xlfpq"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bxxcp"]
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m1mjk"]
 states/Start/position = Vector2(-60, 244)
 states/atk1/node = SubResource("AnimationNodeAnimation_gjtl3")
 states/atk1/position = Vector2(106, 379)
-states/dash/node = SubResource("AnimationNodeAnimation_fkc32")
-states/dash/position = Vector2(162.149, 143.292)
 states/db_jump/node = SubResource("AnimationNodeAnimation_077sq")
 states/db_jump/position = Vector2(340, 100)
 states/fall/node = SubResource("AnimationNodeAnimation_be6mx")
@@ -452,8 +443,8 @@ states/jump_end/node = SubResource("AnimationNodeAnimation_liqnj")
 states/jump_end/position = Vector2(636, 236)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_mhdn6")
 states/move/position = Vector2(137, 244)
-transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_fiyf5"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_3arxa"), "jump", "db_jump", SubResource("AnimationNodeStateMachineTransition_taekn"), "jump_end", "move", SubResource("AnimationNodeStateMachineTransition_kv8a1"), "db_jump", "fall", SubResource("AnimationNodeStateMachineTransition_ewylx"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_b4oop"), "fall", "jump_end", SubResource("AnimationNodeStateMachineTransition_xohni"), "move", "atk1", SubResource("AnimationNodeStateMachineTransition_j0uiw"), "atk1", "move", SubResource("AnimationNodeStateMachineTransition_wsn8s"), "move", "dash", SubResource("AnimationNodeStateMachineTransition_xlfpq"), "dash", "move", SubResource("AnimationNodeStateMachineTransition_bxxcp")]
-graph_offset = Vector2(-418.851, 130.31)
+transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_fiyf5"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_3arxa"), "jump", "db_jump", SubResource("AnimationNodeStateMachineTransition_taekn"), "jump_end", "move", SubResource("AnimationNodeStateMachineTransition_kv8a1"), "db_jump", "fall", SubResource("AnimationNodeStateMachineTransition_ewylx"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_b4oop"), "fall", "jump_end", SubResource("AnimationNodeStateMachineTransition_xohni"), "move", "atk1", SubResource("AnimationNodeStateMachineTransition_j0uiw"), "atk1", "move", SubResource("AnimationNodeStateMachineTransition_wsn8s")]
+graph_offset = Vector2(-179.851, 56.31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmntp"]
 size = Vector2(98.969, 280.412)
@@ -467,7 +458,11 @@ radius = 51.5464
 height = 296.907
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbjpq"]
-size = Vector2(82.165, 29.5876)
+size = Vector2(82.165, 14.7938)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_023hv"]
+radius = 49.4845
+height = 296.907
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.97, 0.97)
@@ -561,8 +556,16 @@ collision_layer = 16384
 collision_mask = 8192
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jumppad"]
-position = Vector2(0, 145.361)
+position = Vector2(0, 140.206)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kbjpq")
+
+[node name="death" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+shape = SubResource("CapsuleShape2D_023hv")
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
@@ -573,3 +576,4 @@ shape = SubResource("RectangleShape2D_kbjpq")
 [connection signal="timeout" from="hitbox/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="jumppad" to="." method="_on_jumppad_body_entered"]
 [connection signal="body_entered" from="jumppad" to="CharacterStateMachine/Air" method="_on_jumppad_body_entered"]
+[connection signal="area_shape_entered" from="death" to="." method="_on_death_area_shape_entered"]

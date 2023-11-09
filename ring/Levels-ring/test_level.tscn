@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://dmmkegp00cl18"]
+[gd_scene load_steps=85 format=3 uid="uid://dmmkegp00cl18"]
 
 [ext_resource type="Texture2D" uid="uid://dq8dmuvg365cc" path="res://ring/Art-ring/Mossy Tilesetsdfsd/Mossy - Decorations&Hazards.png" id="1_eq2oy"]
 [ext_resource type="Script" path="res://ring/Levels-ring/test_level.gd" id="1_flfab"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bt4ilk3wu116x" path="res://ring/enviroment/character_body_2d.tscn" id="8_3ubg2"]
 [ext_resource type="PackedScene" uid="uid://uq12g3ohy650" path="res://ring/items/solution.tscn" id="8_uy5ej"]
 [ext_resource type="Texture2D" uid="uid://bf0moa5sfpiq4" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/Mossy - Decorations&Hazards.png" id="8_we6mv"]
-[ext_resource type="Script" path="res://ring/Levels-ring/deathzone.gd" id="9_cqige"]
 [ext_resource type="Texture2D" uid="uid://n0jfy2sh744w" path="res://ring/Art-ring/Mossy Tilesetsdfsd/Mossy - TileSet.png" id="9_s8mck"]
 [ext_resource type="PackedScene" uid="uid://8vtml04taicq" path="res://ring/items/ring.tscn" id="11_fjly5"]
 [ext_resource type="Texture2D" uid="uid://c48ktntegbyn4" path="res://ring/Art-ring/Mossy Assets/Mossy Tileset/klipartz.com.png" id="13_6vrd3"]
@@ -53710,9 +53709,10 @@ size = Vector2(237.5, 275.5)
 size = Vector2(298, 378)
 
 [node name="TestLevel" type="Node2D"]
+position = Vector2(-1104, 1648)
 script = ExtResource("1_flfab")
-metadata/_edit_horizontal_guides_ = [29697.0, 33061.0, 124.0, -3096.0, -1889.0]
-metadata/_edit_vertical_guides_ = [82378.0, 4800.0]
+metadata/_edit_horizontal_guides_ = [29697.0, 33061.0, -3096.0]
+metadata/_edit_vertical_guides_ = [82378.0]
 
 [node name="BG" parent="." instance=ExtResource("2_f6qbk")]
 
@@ -53847,9 +53847,8 @@ layer_4/tile_data = PackedInt32Array(1703805, 393217, 33, 1376126, 458753, 28, 1
 
 [node name="deathzone" type="Area2D" parent="."]
 position = Vector2(-1273, 596)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("9_cqige")
+collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
 position = Vector2(2070, -645)
@@ -53902,11 +53901,12 @@ position = Vector2(2824, -1304)
 script = ExtResource("19_vouia")
 
 [node name="heart" type="TextureRect" parent="UI"]
-offset_left = 40.0
-offset_top = 24.0
-offset_right = 112.0
-offset_bottom = 96.0
+offset_left = 24.0
+offset_top = 41.0
+offset_right = 96.0
+offset_bottom = 113.0
 texture = ExtResource("20_i6tip")
+metadata/_edit_use_anchors_ = true
 
 [node name="venom" type="TextureRect" parent="UI"]
 visible = false
@@ -53939,10 +53939,10 @@ expand_mode = 1
 script = ExtResource("29_xqmie")
 
 [node name="healthcounter" type="Label" parent="UI"]
-offset_left = 105.0
-offset_top = -9.0
-offset_right = 195.0
-offset_bottom = 114.0
+offset_left = 89.0
+offset_top = 8.0
+offset_right = 179.0
+offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.476563, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -53952,6 +53952,7 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("22_axm1b")
+metadata/_edit_use_anchors_ = true
 
 [node name="boardialogue" type="Area2D" parent="."]
 collision_layer = 0
@@ -53995,9 +53996,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -490.0
+offset_left = -488.0
 offset_top = -388.0
-offset_right = 3423.0
+offset_right = 3425.0
 offset_bottom = 2693.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -54005,6 +54006,7 @@ scale = Vector2(0.25, 0.25)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("33_jc6wm")
+metadata/_edit_use_anchors_ = true
 
 [node name="text" type="Label" parent="main_ui/frame"]
 layout_mode = 1
@@ -54022,6 +54024,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("30_nwq3n")
 theme_override_font_sizes/font_size = 60
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="x" type="TextureButton" parent="main_ui/frame"]
 layout_mode = 1
@@ -54039,6 +54042,7 @@ grow_vertical = 2
 texture_normal = ExtResource("34_bly18")
 texture_pressed = ExtResource("35_v5mtw")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="home" type="TextureButton" parent="main_ui"]
 anchors_preset = -1
@@ -54046,14 +54050,15 @@ anchor_left = 0.979
 anchor_top = 0.03
 anchor_right = 0.979
 anchor_bottom = 0.03
-offset_left = -41.808
-offset_top = 6.56
-offset_right = 128.192
+offset_left = -39.808
+offset_top = 6.55991
+offset_right = 130.192
 offset_bottom = 198.56
 grow_horizontal = 0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("36_a6i7g")
 texture_pressed = ExtResource("37_4a0ca")
+metadata/_edit_use_anchors_ = true
 
 [node name="guide" type="TextureButton" parent="main_ui"]
 anchors_preset = -1
@@ -54061,14 +54066,15 @@ anchor_left = 0.979
 anchor_top = 0.042
 anchor_right = 0.979
 anchor_bottom = 0.042
-offset_left = -48.808
+offset_left = -46.808
 offset_top = 49.784
-offset_right = 161.192
+offset_right = 163.192
 offset_bottom = 320.784
 grow_horizontal = 0
 scale = Vector2(0.23, 0.23)
 texture_normal = ExtResource("38_bti0f")
 texture_pressed = ExtResource("39_dlnop")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="tree_exited" from="leaf" to="Player" method="_on_leaf_tree_exited"]
 [connection signal="tree_exited" from="leaf" to="UI/flower" method="_on_leaf_tree_exited"]
@@ -54079,7 +54085,6 @@ texture_pressed = ExtResource("39_dlnop")
 [connection signal="tree_exited" from="solution" to="Player" method="_on_solution_tree_exited"]
 [connection signal="tree_exited" from="solution" to="UI/solution" method="_on_solution_tree_exited"]
 [connection signal="tree_exited" from="mob" to="teleporter2" method="_on_mob_tree_exited"]
-[connection signal="body_entered" from="deathzone" to="deathzone" method="_on_body_entered"]
 [connection signal="body_entered" from="boardialogue" to="." method="_on_boardialogue_body_entered"]
 [connection signal="body_entered" from="flowerdialogue" to="." method="_on_flowerdialogue_body_entered"]
 [connection signal="body_entered" from="venomdiag" to="." method="_on_area_2d_3_body_entered"]

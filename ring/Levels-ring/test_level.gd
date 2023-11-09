@@ -1,8 +1,8 @@
 extends Node2D
 
-var solution_collected : bool = true
-var venom_collected : bool = true
-var leaf_collected : bool = true
+var solution_collected : bool = false
+var venom_collected : bool = false
+var leaf_collected : bool = false
 
 func _ready():
 	var text = "\n'Here i am in the Mystical Forrest. The Ring is right here but the Myths said it is cursed.\nCan't risk touching it! there's gotta be a way to lift the curse' \nPress: AD to move left and right, SPACE to jump, leftclick to cast fireball\n\n Objective: Lift the curse and take the ring"
