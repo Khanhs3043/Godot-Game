@@ -62,7 +62,9 @@
   - Protection of personal information: The game must comply with regulations on protecting players' personal information and must not collect, store or use personal information illegally.
 ## How to play the game
 The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
+
 The game must have 5 different levels, corresponding to 5 items to find: Diadem, diary, cup, ring, medal. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
+
 Use the arrow keys to move left, right, forward or backward.
 
 ## Installation
