@@ -1,7 +1,7 @@
 # Godot-Game / Soul Reunion
 <h1 align="center">
   <br>
-  <a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Soul Reunion" width="300"></a>
+  <a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Soul Reunion" width="700"></a>
   <br>
   Soul Reunion
   <br>
@@ -66,3 +66,4 @@ You can also play the game by clicking this link: https://github.com/Khanhs3043/
 Godot4, GDScript. 
 The game is made on godot 4 software. 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot game" width="30">
+
