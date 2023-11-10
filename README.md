@@ -26,8 +26,8 @@
   
 * The "Ring" level poses a challenge of moving around looking for objects to solve the curse before getting the ring.
 
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="400"></a>
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring3.png"  alt="Ring" width="400"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="300"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring3.png"  alt="Ring" width="300"></a>
 
 * The "Locket" level requires the player to perform the task of diving underwater and dealing with zombies while bringing Locket out.
 
