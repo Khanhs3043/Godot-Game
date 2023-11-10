@@ -22,6 +22,7 @@
   <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="500">
 * The "Locket" level requires the player to perform the task of diving underwater and dealing with zombies while bringing Locket out.
   <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="500">
+
 ## Design and implementation
 ### Functional requirements
 * The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
