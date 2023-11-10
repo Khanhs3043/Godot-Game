@@ -1,7 +1,7 @@
 # Godot-Game / Soul Reunion
 <h1 align="center">
   <br>
-  <a><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot game" width="300"></a>
+  <a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Soul Reunion" width="300"></a>
   <br>
   Soul Reunion
   <br>
@@ -52,6 +52,17 @@
 The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
 The game must have 5 different levels, corresponding to 5 items to find: Diadem, diary, cup, ring, medal. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
 Use the arrow keys to move left, right, forward or backward.
+
 ## Installation
 To run this application, you will have to use Godot4 software. Copy the project to your computer. Import the project (find and open the project.godot file) into godot. Wait for it to download all resources. Then press the run button.
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Markdownify" width="500"></a>
+
+You can also play the game by clicking this link: https://github.com/Khanhs3043/Godot-Game to open github of game.
+
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Home" width="500"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home2.png" width="500"></a>
+
+## Tools used in this game:
+
+Godot4, GDScript. 
+The game is made on godot 4 software. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot game" width="30">
