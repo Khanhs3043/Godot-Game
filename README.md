@@ -16,23 +16,23 @@
 ## Detail
 * The "Diadem" level will be a puzzle level, in which the player must interact with objects in a room to find the password and open the chest containing Diadem.
 
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%201.png"  alt="Diadem" width="200"></a>
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%204.png"  alt="Diadem" width="200"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%201.png"  alt="Diadem" width="400"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%204.png"  alt="Diadem" width="400"></a>
 
 * In the "Diary" level, players move, collect and use invisible bubbles appropriately to find the diary without being detected.
 
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary1.png"  alt="Diary" width="200"></a>
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary4.png"  alt="Diary" width="200"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary1.png"  alt="Diary" width="400"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary4.png"  alt="Diary" width="400"></a>
   
 * The "Ring" level poses a challenge of moving around looking for objects to solve the curse before getting the ring.
 
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="200"></a>
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring3.png"  alt="Ring" width="200"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="400"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring3.png"  alt="Ring" width="400"></a>
 
 * The "Locket" level requires the player to perform the task of diving underwater and dealing with zombies while bringing Locket out.
 
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="200"></a>
-<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket2.png"  alt="Locket" width="200"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="400"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket2.png"  alt="Locket" width="400"></a>
 
 
 ## Design and implementation
