@@ -38,7 +38,7 @@
 ## Design and implementation
 ### Functional requirements
 * The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
-* The game must have 5 different levels, corresponding to 5 items to find: Diadem, diary, cup, ring, medal. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
+* The game must have 5 different levels, corresponding to 4 items to find: Diadem, diary, ring, locket. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
 * The game must have simple but vivid 2D graphics suitable for each level and context, an easy-to-use and user-friendly interface, diverse and attractive gameplay, characters with their own personalities and appearances. special.
 * The game must have control buttons for players to perform actions such as moving, jumping, being invisible, using spells, grabbing objects, exiting the game, etc.
 * The game must have screens showing players information such as score, health, oxygen, number of found objects, playing time, etc.
@@ -63,21 +63,50 @@
 ## How to play the game
 The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
 
-The game must have 5 different levels, corresponding to 5 items to find: Diadem, diary, cup, ring, medal. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
+The game must have 4 different levels, corresponding to 5 items to find: Diadem, diary, ring, locket. Each level has different gameplay and challenges, requiring players to use different skills and strategies to complete.
 
 Use the arrow keys to move left, right, forward or backward.
-
+### Diary
+SHIFT = Activate stealth
+- A = move Left
+- D = move Right
+- S = move Down
+- W = move Up
+- Approach the chest and click on it to open it
+### Diadem
+- Click, Drag and Drop to interact with objects in the room
+- Enter text to invoke the spell
+### Locket:
+* on the ground:
+  - A = move Left
+  - D = move Right
+  - SPACE = Jump
+* Underwater:
+  - A = move Left
+  - D = move Right
+  - S = move Down
+  - W = move Up
+  - Left click = shoot
+### Ring:
+- A = move Left
+- D = move Right
+- SPACE = Jump
+- double SPACE = double Jump
+- E = Collect objects
 ## Installation
-To run this application, you will have to use Godot4 software. Copy the project to your computer. Import the project (find and open the project.godot file) into godot. Wait for it to download all resources. Then press the run button.
-
-You can also play the game by clicking this link: https://github.com/Khanhs3043/Godot-Game to open github of game.
+To run this application, you will have to use Godot4 software. Download or clone the project to your computer. Import the project (find and open the project.godot file) into godot. Wait for it to download all resources. Then press the run button.
+You can download the exe file to be ready to play our game. Follow this link: https://drive.google.com/file/d/1Dq8P1BBiqytdXYCd5WlNwATrBWZQr8Ra/view?usp=sharing
 
 <a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Home" width="500"></a>
 <a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home2.png" width="500"></a>
 
 ## Tools used in this game:
-
 Godot4, GDScript. 
 The game is made on godot 4 software. 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot game" width="30">
 
+## Contributors:
+1. Nguyễn Thị Xuân Khánh 
+2. Nguyễn Thị Quỳnh Trang
+3. Nguyễn Diệu Linh
+4. Thạc Nguyễn Đình Vũ
