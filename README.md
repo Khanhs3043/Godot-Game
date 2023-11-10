@@ -15,13 +15,25 @@
 - Implementing a game with many levels with diverse gameplay helps increase the fun and novelty of the game, avoiding the feeling of boredom when having to play the same gameplay over and over again. With gentle 2D graphics, it does not require a high-capacity or high-configuration device.
 ## Detail
 * The "Diadem" level will be a puzzle level, in which the player must interact with objects in a room to find the password and open the chest containing Diadem.
- <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%201.png"  alt="Diadem" width="500">
+
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%201.png"  alt="Diadem" width="500"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%204.png"  alt="Diadem" width="500"></a>
+
 * In the "Diary" level, players move, collect and use invisible bubbles appropriately to find the diary without being detected.
-  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary1.png"  alt="Diary" width="500">
+
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary1.png"  alt="Diary" width="500"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary4.png"  alt="Diary" width="500"></a>
+  
 * The "Ring" level poses a challenge of moving around looking for objects to solve the curse before getting the ring.
-  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="500">
+
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="500"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring3.png"  alt="Ring" width="500"></a>
+
 * The "Locket" level requires the player to perform the task of diving underwater and dealing with zombies while bringing Locket out.
-  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="500">
+
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="500"></a>
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket2.png"  alt="Locket" width="500"></a>
+
 
 ## Design and implementation
 ### Functional requirements
