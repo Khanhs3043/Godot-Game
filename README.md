@@ -15,9 +15,13 @@
 - Implementing a game with many levels with diverse gameplay helps increase the fun and novelty of the game, avoiding the feeling of boredom when having to play the same gameplay over and over again. With gentle 2D graphics, it does not require a high-capacity or high-configuration device.
 ## Detail
 * The "Diadem" level will be a puzzle level, in which the player must interact with objects in a room to find the password and open the chest containing Diadem.
+ <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diadem%201.png"  alt="Diadem" width="500">
 * In the "Diary" level, players move, collect and use invisible bubbles appropriately to find the diary without being detected.
+  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Diary1.png"  alt="Diary" width="500">
 * The "Ring" level poses a challenge of moving around looking for objects to solve the curse before getting the ring.
+  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Ring1.png"  alt="Ring" width="500">
 * The "Locket" level requires the player to perform the task of diving underwater and dealing with zombies while bringing Locket out.
+  <img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/Locket1.png"  alt="Locket" width="500">
 ## Design and implementation
 ### Functional requirements
 * The game allows players to take on the role of a character and their task is to find lost items for this character, needing to find enough items for the character to heal his soul.
@@ -49,4 +53,4 @@ The game must have 5 different levels, corresponding to 5 items to find: Diadem,
 Use the arrow keys to move left, right, forward or backward.
 ## Installation
 To run this application, you will have to use Godot4 software. Copy the project to your computer. Import the project (find and open the project.godot file) into godot. Wait for it to download all resources. Then press the run button.
-
+<a><img src="https://github.com/nguyendinhvucbg2k3/Kan/blob/main/game/home1.png" alt="Markdownify" width="500"></a>
